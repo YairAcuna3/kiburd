@@ -153,7 +153,7 @@ export default function CoursePage() {
     const currentLevelData = getCurrentLevel();
 
     return (
-        <div className="min-h-screen kiburd-bg-primary">
+        <div className="min-h-screen bg-linear-to-br from-[#01411c] to-[#5d993e]">
             <div className="container mx-auto px-4 py-8">
                 <h1 className="text-4xl font-bold kiburd-text-primary mb-8 text-center">
                     Curso de Mecanografía Urdu
@@ -188,7 +188,7 @@ export default function CoursePage() {
                         <div className="flex items-center gap-4 mb-6">
                             <button
                                 onClick={goBackToPhases}
-                                className="px-4 py-2 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:kiburd-bg-primary transition-colors"
+                                className="px-4 py-2 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:bg-green-600 hover:text-white hover:-translate-x-1 hover:-translate-y-1 hover:-rotate-2 transition-all duration-300 shadow-md hover:shadow-lg"
                             >
                                 ← Volver a fases
                             </button>
@@ -222,7 +222,7 @@ export default function CoursePage() {
                         <div className="flex items-center gap-4 mb-6">
                             <button
                                 onClick={goBackToLevels}
-                                className="px-4 py-2 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:kiburd-bg-primary transition-colors"
+                                className="px-4 py-2 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:bg-green-600 hover:text-white hover:-translate-x-1 hover:-translate-y-1 hover:-rotate-2 transition-all duration-300 shadow-md hover:shadow-lg"
                             >
                                 ← Volver a niveles
                             </button>

@@ -38,7 +38,7 @@ export default function FreeTestPage() {
             // Only selectable keys (not decorative)
             'ق', 'و', 'ع', 'ر', 'ت', 'ے', 'ء', 'ی', 'ہ', 'پ', '[', ']',
             'ا', 'س', 'د', 'ف', 'گ', 'ح', 'ج', 'ک', 'ل', '؛', "'",
-            'ز', 'ش', 'چ', 'ط', 'ب', 'ن', 'م', '،', '۔', '/'
+            'ز', 'ش', 'چ', 'ط', 'ب', 'ن', 'م', '،', '۔', '/', 'ھ', 'ئ', '؎', ' ْ',
         ]);
         setSelectedKeys(allKeys);
     };
@@ -51,7 +51,7 @@ export default function FreeTestPage() {
         <div className="min-h-screen bg-linear-to-br from-[#01411c] to-[#5d993e] py-8">
             <div className="container mx-auto px-4 max-w-6xl">
                 {showResults && testResults ? (
-                    <TestResultsComponent results={testResults} onRestart={handleRestart} />
+                    <TestResultsComponent results={testResults} onRestart={handleRestart} showRestartBtn={true} />
                 ) : (
                     <div className="space-y-8">
                         {/* Keyboard Selection */}
@@ -63,19 +63,19 @@ export default function FreeTestPage() {
                                 <div className="space-x-2">
                                     <button
                                         onClick={selectAllKeys}
-                                        className="px-4 py-2 kiburd-btn-success text-white rounded-md transition-colors hover:kiburd-btn-success-hover"
+                                        className="px-4 py-2 kiburd-btn-success text-white rounded-md transition-colors hover:kiburd-btn-success-hover hover-scale"
                                     >
                                         Todas
                                     </button>
                                     <button
                                         onClick={clearAllKeys}
-                                        className="px-4 py-2 kiburd-btn-danger text-white rounded-md transition-colors hover:kiburd-btn-danger-hover"
+                                        className="px-4 py-2 kiburd-btn-danger text-white rounded-md transition-colors hover:kiburd-btn-danger-hover hover-scale"
                                     >
                                         Ninguna
                                     </button>
                                 </div>
                             </div>
-                            <UrduKeyboard selectedKeys={selectedKeys} onKeyToggle={handleKeyToggle} />
+                            <UrduKeyboard selectedKeys={selectedKeys} onKeyToggle={handleKeyToggle} showNextKey={false} />
                         </div>
 
                         {/* Typing Test */}

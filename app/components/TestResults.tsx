@@ -4,10 +4,11 @@ import { TestResults } from './TypingTest';
 
 interface TestResultsProps {
     results: TestResults;
-    onRestart: () => void;
+    onRestart?: () => void;
+    showRestartBtn?: boolean;
 }
 
-export default function TestResultsComponent({ results, onRestart }: TestResultsProps) {
+export default function TestResultsComponent({ results, onRestart, showRestartBtn = false }: TestResultsProps) {
     // Calculate correct and wrong words (approximation based on characters)
     const correctWords = Math.floor(results.correctKeys / 5); // Standard word length approximation
     const wrongWords = Math.floor(results.incorrectKeys / 5);
@@ -60,6 +61,18 @@ export default function TestResultsComponent({ results, onRestart }: TestResults
                     <span className="text-red-600 font-bold text-2xl">{wrongWords}</span>
                 </div>
             </div>
+
+            {/* Restart Button */}
+            {showRestartBtn && onRestart && (
+                <div className="mt-8 text-center">
+                    <button
+                        onClick={onRestart}
+                        className="px-8 py-3 bg-gradient-to-r from-green-500 to-green-600 hover:from-green-600 hover:to-green-700 text-white font-semibold rounded-lg shadow-lg transition-all duration-200 transform hover:scale-105"
+                    >
+                        Restart Test
+                    </button>
+                </div>
+            )}
         </div>
     );
 }

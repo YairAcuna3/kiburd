@@ -234,7 +234,7 @@ export default function CourseTypingTest({ text, onTestComplete }: CourseTypingT
                             </div>
                             <button
                                 onClick={resetTest}
-                                className="px-4 py-4 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:kiburd-bg-primary focus:kiburd-bg-primary focus:outline-none focus:ring-2 focus:ring-green-400 transition-colors"
+                                className="px-4 py-4 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:kiburd-bg-primary focus:kiburd-bg-primary focus:outline-none focus:ring-2 focus:ring-green-400 transition-colors hover-scale"
                                 title="Repetir test"
                             >
                                 <svg
@@ -255,7 +255,7 @@ export default function CourseTypingTest({ text, onTestComplete }: CourseTypingT
                     ) : (
                         <button
                             onClick={resetTest}
-                            className="px-4 py-4 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:kiburd-bg-primary focus:kiburd-bg-primary focus:outline-none focus:ring-2 focus:ring-green-400 transition-colors"
+                            className="px-4 py-4 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:kiburd-bg-primary focus:kiburd-bg-primary focus:outline-none focus:ring-2 focus:ring-green-400 transition-colors hover-scale"
                             title="Iniciar test"
                         >
                             <svg
@@ -287,6 +287,7 @@ export default function CourseTypingTest({ text, onTestComplete }: CourseTypingT
                         selectedKeys={new Set([pressedKey])}
                         nextKey={nextKey}
                         onKeyToggle={() => { }}
+                        showNextKey={true}
                     />
                 </div>
             </div>

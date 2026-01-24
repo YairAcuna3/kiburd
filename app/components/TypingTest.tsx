@@ -262,7 +262,7 @@ export default function TypingTest({ selectedKeys, testDuration, onTestComplete,
                             ref={restartButtonRef}
                             onClick={restartTest}
                             onKeyDown={handleRestartKeyDown}
-                            className="px-4 py-4 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:kiburd-bg-primary focus:kiburd-bg-primary focus:outline-none focus:ring-2 focus:ring-green-400 transition-colors"
+                            className="hover-scale px-4 py-4 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:kiburd-bg-primary focus:kiburd-bg-primary focus:outline-none focus:ring-2 focus:ring-green-400 transition-colors"
                             title="Reiniciar test (Tab para acceder)"
                         >
                             <svg
@@ -292,6 +292,7 @@ export default function TypingTest({ selectedKeys, testDuration, onTestComplete,
                         <UrduKeyboard
                             selectedKeys={new Set([pressedKey])}
                             onKeyToggle={() => { }} // No necesitamos funcionalidad de toggle durante el test
+                            showNextKey={false}
                         />
                     </div>
                 </div>

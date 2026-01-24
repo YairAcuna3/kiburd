@@ -2,85 +2,307 @@
   "phases": [
     {
       "id": 1,
-      "title": "Fase 1: Letras Básicas",
+      "title": "1: Fila media",
       "levels": [
         {
           "id": 1,
-          "title": "Nivel 1: Vocales",
-          "letters": "اعیوُ"
+          "title": "Nivel 1",
+          "letters": "فج"
         },
         {
           "id": 2,
-          "title": "Nivel 2: Consonantes Básicas",
-          "letters": "بتثجحخ"
+          "title": "Nivel 2",
+          "letters": "دک"
         },
         {
           "id": 3,
-          "title": "Nivel 3: Más Consonantes",
-          "letters": "دذرزسش"
+          "title": "Nivel 3",
+          "letters": "فجدک"
         },
         {
           "id": 4,
-          "title": "Nivel 4: Consonantes Finales",
-          "letters": "صضطظعغفقکگلمنوہی"
+          "title": "Nivel 4",
+          "letters": "سل"
+        },
+        {
+          "id": 5,
+          "title": "Nivel 5",
+          "letters": "ا؛"
+        },
+        {
+          "id": 6,
+          "title": "Nivel 6",
+          "letters": "سلا؛"
+        },
+        {
+          "id": 7,
+          "title": "Nivel 7",
+          "letters": "فجدکسلا؛"
+        },
+        {
+          "id": 8,
+          "title": "Nivel 8",
+          "letters": "گھ"
+        },
+        {
+          "id": 9,
+          "title": "Nivel 9",
+          "letters": "فجدکسلا؛ھگ"
         }
       ]
     },
     {
       "id": 2,
-      "title": "Fase 2: Combinaciones Simples",
+      "title": "2: Fila superior",
       "levels": [
         {
-          "id": 5,
-          "title": "Nivel 1: Sílabas Básicas",
-          "letters": "بابماماتاتا"
+          "id": 10,
+          "title": "Nivel 10",
+          "letters": "رئ"
         },
         {
-          "id": 6,
-          "title": "Nivel 2: Palabras de 2 Letras",
-          "letters": "بابماماتاتاکاکا"
+          "id": 11,
+          "title": "Nivel 11",
+          "letters": "عی"
         },
         {
-          "id": 7,
-          "title": "Nivel 3: Palabras Comunes",
-          "letters": "سلامنامکیاہے"
+          "id": 12,
+          "title": "Nivel 12",
+          "letters": "رئعی"
+        },
+        {
+          "id": 13,
+          "title": "Nivel 13",
+          "letters": "وہ"
+        },
+        {
+          "id": 14,
+          "title": "Nivel 14",
+          "letters": "قپ"
+        },
+        {
+          "id": 15,
+          "title": "Nivel 15",
+          "letters": "وہقپ"
+        },
+        {
+          "id": 16,
+          "title": "Nivel 16",
+          "letters": "رئعیوہقپ"
+        },
+        {
+          "id": 17,
+          "title": "Nivel 17",
+          "letters": "تے"
+        },
+        {
+          "id": 18,
+          "title": "Nivel 18",
+          "letters": "رئعیوہقپتے"
         }
       ]
     },
     {
       "id": 3,
-      "title": "Fase 3: Palabras y Frases",
+      "title": "3: Fila media y superior",
       "levels": [
         {
-          "id": 8,
-          "title": "Nivel 1: Saludos",
-          "letters": "سلام علیکم آداب"
+          "id": "19",
+          "title": "Nivel 19",
+          "letters": "فجرئ"
         },
         {
-          "id": 9,
-          "title": "Nivel 2: Frases Básicas",
-          "letters": "آپ کیسے ہیں میں ٹھیک ہوں"
+          "id": "20",
+          "title": "Nivel 20",
+          "letters": "دکعی"
         },
         {
-          "id": 10,
-          "title": "Nivel 3: Conversación Simple",
-          "letters": "آپ کا نام کیا ہے میرا نام احمد ہے"
+          "id": "21",
+          "title": "Nivel 21",
+          "letters": "فجدکعیرئ"
+        },
+        {
+          "id": "22",
+          "title": "Nivel 22",
+          "letters": "سلوہ"
+        },
+        {
+          "id": "23",
+          "title": "Nivel 23",
+          "letters": "ا؛قپ"
+        },
+        {
+          "id": "24",
+          "title": "Nivel 24",
+          "letters": "ا؛قپسلوہ"
+        },
+        {
+          "id": "25",
+          "title": "Nivel 25",
+          "letters": "فجرئدکعیسلوہا؛قپ"
+        },
+        {
+          "id": "26",
+          "title": "Nivel 26",
+          "letters": "گھتے"
+        },
+        {
+          "id": "27",
+          "title": "Nivel 27",
+          "letters": "فجدکسلا؛قپوہعیرئتےگھ"
         }
       ]
     },
     {
       "id": 4,
-      "title": "Fase 4: Texto Completo",
+      "title": "4: Fila inferior",
       "levels": [
         {
-          "id": 11,
-          "title": "Nivel 1: Párrafos Cortos",
-          "letters": "یہ ایک آسان جملہ ہے جو آپ کو اردو ٹائپنگ سکھانے کے لیے بنایا گیا ہے۔ اردو ایک خوبصورت زبان ہے۔"
+          "id": "28",
+          "title": "Nivel 28",
+          "letters": "طن"
         },
         {
-          "id": 12,
-          "title": "Nivel 2: Texto Avanzado",
-          "letters": "پاکستان ایک خوبصورت ملک ہے جہاں مختلف زبانیں بولی جاتی ہیں۔ اردو یہاں کی قومی زبان ہے اور یہ بہت سے لوگوں کی مادری زبان بھی ہے۔"
+          "id": "29",
+          "title": "Nivel 29",
+          "letters": "چم"
+        },
+        {
+          "id": "30",
+          "title": "Nivel 30",
+          "letters": "طنچم"
+        },
+        {
+          "id": "31",
+          "title": "Nivel 31",
+          "letters": "ش،"
+        },
+        {
+          "id": "32",
+          "title": "Nivel 32",
+          "letters": "ز۔"
+        },
+        {
+          "id": "33",
+          "title": "Nivel 33",
+          "letters": "ش،ز۔"
+        },
+        {
+          "id": "34",
+          "title": "Nivel 35",
+          "letters": "طچشزنم،۔"
+        },
+        {
+          "id": "35",
+          "title": "Nivel 35",
+          "letters": "بطن"
+        },
+        {
+          "id": "36",
+          "title": "Nivel 36",
+          "letters": "زشچطبنم،۔"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "5: Fila media e inferior",
+      "levels": [
+        {
+          "id": "37",
+          "title": "Nivel 37",
+          "letters": "فجطن"
+        },
+        {
+          "id": "38",
+          "title": "Nivel 38",
+          "letters": "دکچم"
+        },
+        {
+          "id": "39",
+          "title": "Nivel 39",
+          "letters": "فجدکطنچم"
+        },
+        {
+          "id": "40",
+          "title": "Nivel 40",
+          "letters": "سلش۔"
+        },
+        {
+          "id": "41",
+          "title": "Nivel 41",
+          "letters": "ا؛ز۔"
+        },
+        {
+          "id": "42",
+          "title": "Nivel 42",
+          "letters": "سلا؛زش۔،"
+        },
+        {
+          "id": "43",
+          "title": "Nivel 43",
+          "letters": "فجدکسلا؛ز۔ش،چمطن"
+        },
+        {
+          "id": "44",
+          "title": "Nivel 44",
+          "letters": "گھبطن"
+        },
+        {
+          "id": "45",
+          "title": "Nivel 45",
+          "letters": "؛السکدجفگھ۔ز،شمچنطب"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "6: Todas las filas",
+      "levels": [
+        {
+          "id": "46",
+          "title": "Nivel 46",
+          "letters": "رئفجطن"
+        },
+        {
+          "id": "47",
+          "title": "Nivel 47",
+          "letters": "عیدکچم"
+        },
+        {
+          "id": "48",
+          "title": "Nivel 48",
+          "letters": "رئفجطنعیدکچم"
+        },
+        {
+          "id": "49",
+          "title": "Nivel 49",
+          "letters": "وہسلش،"
+        },
+        {
+          "id": "50",
+          "title": "Nivel 50",
+          "letters": "قپا؛ز۔"
+        },
+        {
+          "id": "51",
+          "title": "Nivel 51",
+          "letters": "وہسلش،قپا؛ز۔"
+        },
+        {
+          "id": "52",
+          "title": "Nivel 52",
+          "letters": "قوعرئیہپاسدفجکل؛زشچطنم،۔"
+        },
+        {
+          "id": "53",
+          "title": "Nivel 53",
+          "letters": "تےگھطبن"
+        },
+        {
+          "id": "54",
+          "title": "Nivel 54",
+          "letters": "قوعرتےئیہپاسدفگھجکل؛زشچطبنم،۔"
         }
       ]
     }

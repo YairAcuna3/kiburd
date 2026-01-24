@@ -13,7 +13,7 @@ export default function TopBar() {
                     {/* Logo y nombre */}
                     <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
                         <img
-                            src="/PakistanFlag.png"
+                            src="/KiburdLogo.png"
                             alt="Bandera de Pakistán"
                             className="w-10 h-7 object-cover rounded shadow-sm"
                         />
@@ -24,19 +24,19 @@ export default function TopBar() {
                     <div className="flex items-center space-x-6">
                         <Link
                             href="/free-test"
-                            className={`px-4 py-2 rounded-md transition-colors ${pathname === '/free-test' || pathname === '/'
+                            className={`hover-scale px-4 py-2 rounded-md transition-colors ${pathname === '/free-test' || pathname === '/'
                                 ? 'bg-green-600 text-white'
                                 : 'kiburd-text-primary hover:kiburd-bg-secondary'
-                                }`}
+                                } ${pathname !== '/free-test' && pathname !== '/' ? 'bg-[#01411c]' : ''}`}
                         >
                             Custom test
                         </Link>
                         <Link
                             href="/course"
-                            className={`px-4 py-2 rounded-md transition-colors ${pathname === '/course'
+                            className={`hover-scale px-4 py-2 rounded-md transition-colors ${pathname === '/course'
                                 ? 'bg-green-600 text-white'
                                 : 'kiburd-text-primary hover:kiburd-bg-secondary'
-                                }`}
+                                } ${pathname !== '/course' ? 'bg-[#01411c]' : ''}`}
                         >
                             Curso
                         </Link>

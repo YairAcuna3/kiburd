@@ -4,6 +4,7 @@ interface UrduKeyboardProps {
     selectedKeys: Set<string>;
     nextKey?: string; // Nueva prop para la siguiente tecla
     onKeyToggle: (key: string) => void;
+    showNextKey?: boolean; // Mostrar indicador de siguiente tecla
 }
 
 // Urdu Phonetic keyboard layout matching QWERTY positions
@@ -36,10 +37,10 @@ const URDU_KEYBOARD_LAYOUT = [
     }
 ];
 
-export default function UrduKeyboard({ selectedKeys, nextKey, onKeyToggle }: UrduKeyboardProps) {
+export default function UrduKeyboard({ selectedKeys, nextKey, onKeyToggle, showNextKey = false }: UrduKeyboardProps) {
     const renderKey = (key: string, isDecorative: boolean, isSpaceBar = false) => {
         const isSelected = selectedKeys.has(key);
-        const isNextKey = nextKey === key;
+        const isNextKey = showNextKey && nextKey === key;
         const isClickable = !isDecorative;
 
         // Keys that should have tactile bumps (F and J positions in Urdu Phonetic)
@@ -91,10 +92,12 @@ export default function UrduKeyboard({ selectedKeys, nextKey, onKeyToggle }: Urd
                         <div className="w-4 h-4 bg-[#508b39] rounded border"></div>
                         <span>Presionada</span>
                     </div>
-                    <div className="flex items-center gap-2">
-                        <div className="w-4 h-4 bg-blue-500 rounded border animate-pulse"></div>
-                        <span>Siguiente</span>
-                    </div>
+                    {showNextKey && (
+                        <div className="flex items-center gap-2">
+                            <div className="w-4 h-4 bg-blue-500 rounded border animate-pulse"></div>
+                            <span>Siguiente</span>
+                        </div>
+                    )}
                     <div className="flex items-center gap-2">
                         <div className="w-4 h-4 kiburd-bg-primary border-2 border-[var(--kiburd-bg-secondary)] rounded"></div>
                         <span>Disponibles</span>
@@ -104,9 +107,11 @@ export default function UrduKeyboard({ selectedKeys, nextKey, onKeyToggle }: Urd
                         <span>Decorativas</span>
                     </div>
                 </div>
-                <div className="font-medium">
-                    {nextKey ? `Siguiente: ${nextKey === 'Space' ? 'Espacio' : nextKey}` : 'Completado'}
-                </div>
+                {showNextKey && (
+                    <div className="font-medium">
+                        {nextKey ? `Siguiente: ${nextKey === 'Space' ? 'Espacio' : nextKey}` : 'Completado'}
+                    </div>
+                )}
             </div>
         </div>
     );

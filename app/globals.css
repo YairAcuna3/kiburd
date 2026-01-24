@@ -122,3 +122,12 @@ body {
 .kiburd-btn-primary:hover {
   background-color: var(--kiburd-btn-primary-hover);
 }
+
+/* Hover scale animation */
+.hover-scale {
+  transition: transform 0.2s ease-in-out;
+}
+
+.hover-scale:hover {
+  transform: scale(1.1);
+}
