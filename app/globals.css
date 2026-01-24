@@ -3,6 +3,36 @@
 :root {
   --background: #ffffff;
   --foreground: #171717;
+
+  /* Kiburd Dark Theme Colors */
+  --kiburd-bg-primary: #181a1b; /* Main background color (replaces white) */
+  --kiburd-bg-secondary: #1e2022; /* Secondary background color (replaces gray) */
+  --kiburd-bg-tertiary: #2a2d30; /* Tertiary background for decorative elements */
+  --kiburd-text-primary: #ffffff; /* Primary text color */
+  --kiburd-text-secondary: #e5e7eb; /* Secondary text color */
+  --kiburd-text-muted: #9ca3af; /* Muted text color for placeholders */
+
+  /* Brand colors */
+  --kiburd-green-primary: #01411c; /* Primary green */
+  --kiburd-green-secondary: #508b39; /* Secondary green */
+  --kiburd-green-light: #5d993e; /* Light green */
+  --kiburd-green-dark: #02522a; /* Dark green for hovers */
+
+  /* State colors - darker versions for dark theme */
+  --kiburd-success-bg: #166534; /* Success background (green-800) */
+  --kiburd-success-text: #bbf7d0; /* Success text (green-200) */
+  --kiburd-error-bg: #991b1b; /* Error background (red-800) */
+  --kiburd-error-text: #fecaca; /* Error text (red-200) */
+  --kiburd-info-bg: #1e40af; /* Info background (blue-800) */
+  --kiburd-info-text: #bfdbfe; /* Info text (blue-200) */
+
+  /* Button colors */
+  --kiburd-btn-success: #15803d; /* Success button (green-700) */
+  --kiburd-btn-success-hover: #166534; /* Success button hover (green-800) */
+  --kiburd-btn-danger: #b91c1c; /* Danger button (red-700) */
+  --kiburd-btn-danger-hover: #991b1b; /* Danger button hover (red-800) */
+  --kiburd-btn-primary: #059669; /* Primary button (emerald-600) */
+  --kiburd-btn-primary-hover: #047857; /* Primary button hover (emerald-700) */
 }
 
 @theme inline {
@@ -23,4 +53,72 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+}
+/* Placeholder styles for dark theme */
+.typing-input::placeholder {
+  color: var(--kiburd-text-muted);
+  opacity: 0.7;
+}
+
+.typing-input:focus::placeholder {
+  color: var(--kiburd-text-muted);
+  opacity: 0.5;
+}
+
+/* Utility classes for Kiburd theme */
+.kiburd-bg-primary {
+  background-color: var(--kiburd-bg-primary);
+}
+.kiburd-bg-secondary {
+  background-color: var(--kiburd-bg-secondary);
+}
+.kiburd-bg-tertiary {
+  background-color: var(--kiburd-bg-tertiary);
+}
+.kiburd-text-primary {
+  color: var(--kiburd-text-primary);
+}
+.kiburd-text-secondary {
+  color: var(--kiburd-text-secondary);
+}
+.kiburd-text-muted {
+  color: var(--kiburd-text-muted);
+}
+
+.kiburd-success-bg {
+  background-color: var(--kiburd-success-bg);
+}
+.kiburd-success-text {
+  color: var(--kiburd-success-text);
+}
+.kiburd-error-bg {
+  background-color: var(--kiburd-error-bg);
+}
+.kiburd-error-text {
+  color: var(--kiburd-error-text);
+}
+.kiburd-info-bg {
+  background-color: var(--kiburd-info-bg);
+}
+.kiburd-info-text {
+  color: var(--kiburd-info-text);
+}
+
+.kiburd-btn-success {
+  background-color: var(--kiburd-btn-success);
+}
+.kiburd-btn-success:hover {
+  background-color: var(--kiburd-btn-success-hover);
+}
+.kiburd-btn-danger {
+  background-color: var(--kiburd-btn-danger);
+}
+.kiburd-btn-danger:hover {
+  background-color: var(--kiburd-btn-danger-hover);
+}
+.kiburd-btn-primary {
+  background-color: var(--kiburd-btn-primary);
+}
+.kiburd-btn-primary:hover {
+  background-color: var(--kiburd-btn-primary-hover);
 }

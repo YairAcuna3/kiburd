@@ -162,6 +162,13 @@ export default function TypingTest({ selectedKeys, testDuration, onTestComplete,
         prepareTest();
     }, [prepareTest]);
 
+    // Auto-focus input when component mounts and when test is ready
+    useEffect(() => {
+        if (isReady && inputRef.current) {
+            inputRef.current.focus();
+        }
+    }, [isReady]);
+
     // Timer effect
     useEffect(() => {
         if (isActive && timeLeft > 0) {
@@ -189,11 +196,11 @@ export default function TypingTest({ selectedKeys, testDuration, onTestComplete,
             let className = 'text-2xl ';
 
             if (index < userInput.length) {
-                className += userInput[index] === char ? 'bg-green-200 text-green-800' : 'bg-red-200 text-red-800';
+                className += userInput[index] === char ? 'kiburd-success-bg kiburd-success-text' : 'kiburd-error-bg kiburd-error-text';
             } else if (index === userInput.length) {
-                className += 'bg-blue-200 text-blue-800 animate-pulse';
+                className += 'kiburd-info-bg kiburd-info-text animate-pulse';
             } else {
-                className += 'text-gray-600';
+                className += 'kiburd-text-primary';
             }
 
             return (
@@ -208,7 +215,7 @@ export default function TypingTest({ selectedKeys, testDuration, onTestComplete,
         <div className="space-y-6">
             {(isReady || isActive) && (
                 <div className="space-y-4">
-                    <div className="bg-gray-50 p-6 rounded-lg border-2 border-gray-200 min-h-32 font-mono leading-relaxed">
+                    <div className="kiburd-bg-secondary p-6 rounded-lg border-2 border-[var(--kiburd-bg-secondary)] min-h-32 font-mono leading-relaxed">
                         {renderText()}
                     </div>
 
@@ -219,7 +226,8 @@ export default function TypingTest({ selectedKeys, testDuration, onTestComplete,
                             value={userInput}
                             onChange={handleInputChange}
                             onKeyDown={handleKeyDown}
-                            className="text-[#01411c] flex-1 p-4 text-xl border-2 border-gray-300 rounded-lg focus:border-[#01411c] focus:outline-none font-mono"
+                            autoFocus
+                            className="typing-input kiburd-text-primary kiburd-bg-primary flex-1 p-4 text-xl border-2 border-[var(--kiburd-bg-secondary)] rounded-lg focus:border-green-600 focus:outline-none font-mono"
                             placeholder="Comienza a escribir aquí..."
                         />
                         {isActive ? (
@@ -254,7 +262,7 @@ export default function TypingTest({ selectedKeys, testDuration, onTestComplete,
                             ref={restartButtonRef}
                             onClick={restartTest}
                             onKeyDown={handleRestartKeyDown}
-                            className="px-4 py-4 bg-gray-500 text-white rounded-lg hover:bg-gray-600 focus:bg-gray-600 focus:outline-none focus:ring-2 focus:ring-gray-400 transition-colors"
+                            className="px-4 py-4 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:kiburd-bg-primary focus:kiburd-bg-primary focus:outline-none focus:ring-2 focus:ring-green-400 transition-colors"
                             title="Reiniciar test (Tab para acceder)"
                         >
                             <svg
@@ -273,7 +281,7 @@ export default function TypingTest({ selectedKeys, testDuration, onTestComplete,
                         </button>
                     </div>
 
-                    <div className="flex justify-between text-sm text-gray-600">
+                    <div className="flex justify-between text-sm kiburd-text-primary">
                         <span>Correctas: {correctKeys}</span>
                         <span>Incorrectas: {incorrectKeys}</span>
                         <span>Total: {correctKeys + incorrectKeys}</span>

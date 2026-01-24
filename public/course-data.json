@@ -1,0 +1,88 @@
+{
+  "phases": [
+    {
+      "id": 1,
+      "title": "Fase 1: Letras Básicas",
+      "levels": [
+        {
+          "id": 1,
+          "title": "Nivel 1: Vocales",
+          "letters": "اعیوُ"
+        },
+        {
+          "id": 2,
+          "title": "Nivel 2: Consonantes Básicas",
+          "letters": "بتثجحخ"
+        },
+        {
+          "id": 3,
+          "title": "Nivel 3: Más Consonantes",
+          "letters": "دذرزسش"
+        },
+        {
+          "id": 4,
+          "title": "Nivel 4: Consonantes Finales",
+          "letters": "صضطظعغفقکگلمنوہی"
+        }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "Fase 2: Combinaciones Simples",
+      "levels": [
+        {
+          "id": 5,
+          "title": "Nivel 1: Sílabas Básicas",
+          "letters": "بابماماتاتا"
+        },
+        {
+          "id": 6,
+          "title": "Nivel 2: Palabras de 2 Letras",
+          "letters": "بابماماتاتاکاکا"
+        },
+        {
+          "id": 7,
+          "title": "Nivel 3: Palabras Comunes",
+          "letters": "سلامنامکیاہے"
+        }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "Fase 3: Palabras y Frases",
+      "levels": [
+        {
+          "id": 8,
+          "title": "Nivel 1: Saludos",
+          "letters": "سلام علیکم آداب"
+        },
+        {
+          "id": 9,
+          "title": "Nivel 2: Frases Básicas",
+          "letters": "آپ کیسے ہیں میں ٹھیک ہوں"
+        },
+        {
+          "id": 10,
+          "title": "Nivel 3: Conversación Simple",
+          "letters": "آپ کا نام کیا ہے میرا نام احمد ہے"
+        }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "Fase 4: Texto Completo",
+      "levels": [
+        {
+          "id": 11,
+          "title": "Nivel 1: Párrafos Cortos",
+          "letters": "یہ ایک آسان جملہ ہے جو آپ کو اردو ٹائپنگ سکھانے کے لیے بنایا گیا ہے۔ اردو ایک خوبصورت زبان ہے۔"
+        },
+        {
+          "id": 12,
+          "title": "Nivel 2: Texto Avanzado",
+          "letters": "پاکستان ایک خوبصورت ملک ہے جہاں مختلف زبانیں بولی جاتی ہیں۔ اردو یہاں کی قومی زبان ہے اور یہ بہت سے لوگوں کی مادری زبان بھی ہے۔"
+        }
+      ]
+    }
+  ]
+}

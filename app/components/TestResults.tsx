@@ -8,49 +8,57 @@ interface TestResultsProps {
 }
 
 export default function TestResultsComponent({ results, onRestart }: TestResultsProps) {
+    // Calculate correct and wrong words (approximation based on characters)
+    const correctWords = Math.floor(results.correctKeys / 5); // Standard word length approximation
+    const wrongWords = Math.floor(results.incorrectKeys / 5);
+
     return (
-        <div className="bg-white p-8 rounded-lg shadow-lg border-2 border-gray-200">
-            <h2 className="text-3xl font-bold text-center mb-8 text-gray-800">
-                ¡Test Completado!
-            </h2>
-
-            <div className="grid grid-cols-2 gap-6 mb-8">
-                <div className="text-center p-4 bg-blue-50 rounded-lg">
-                    <div className="text-4xl font-bold text-blue-600 mb-2">
-                        {results.accuracy}%
-                    </div>
-                    <div className="text-gray-600 font-medium">Precisión</div>
+        <div className="kiburd-bg-primary p-8 rounded-lg shadow-lg max-w-2xl mx-auto">
+            {/* WPM Section */}
+            <div className="text-center mb-12">
+                <div className="text-8xl font-bold mb-2" style={{
+                    background: 'linear-gradient(45deg, #4ade80, #22c55e, #16a34a)',
+                    WebkitBackgroundClip: 'text',
+                    WebkitTextFillColor: 'transparent',
+                    backgroundClip: 'text'
+                }}>
+                    {results.wpm} WPM
                 </div>
-
-                <div className="text-center p-4 bg-green-50 rounded-lg">
-                    <div className="text-4xl font-bold text-green-600 mb-2">
-                        {results.wpm}
-                    </div>
-                    <div className="text-gray-600 font-medium">Palabras por minuto</div>
-                </div>
-
-                <div className="text-center p-4 bg-emerald-50 rounded-lg">
-                    <div className="text-4xl font-bold text-emerald-600 mb-2">
-                        {results.correctKeys}
-                    </div>
-                    <div className="text-gray-600 font-medium">Teclas correctas</div>
-                </div>
-
-                <div className="text-center p-4 bg-red-50 rounded-lg">
-                    <div className="text-4xl font-bold text-red-600 mb-2">
-                        {results.incorrectKeys}
-                    </div>
-                    <div className="text-gray-600 font-medium">Teclas incorrectas</div>
+                <div className="kiburd-text-primary text-lg font-medium">
+                    (words per minute)
                 </div>
             </div>
 
-            <div className="text-center">
-                <button
-                    onClick={onRestart}
-                    className="px-8 py-4 bg-blue-500 text-white rounded-lg font-bold text-xl hover:bg-blue-600 transition-colors"
-                >
-                    Hacer otro test
-                </button>
+            {/* Stats Section */}
+            <div className="space-y-6">
+                {/* Keystrokes */}
+                <div className="flex justify-between items-center py-4 border-b border-[var(--kiburd-bg-secondary)]">
+                    <span className="kiburd-text-primary text-xl font-medium">Keystrokes</span>
+                    <div className="flex items-center gap-2">
+                        <span className="text-green-600 font-bold text-xl">({results.correctKeys}</span>
+                        <span className="kiburd-text-primary font-bold text-xl">|</span>
+                        <span className="text-red-600 font-bold text-xl">{results.incorrectKeys})</span>
+                        <span className="kiburd-text-primary font-bold text-xl ml-2">{results.totalKeys}</span>
+                    </div>
+                </div>
+
+                {/* Accuracy */}
+                <div className="flex justify-between items-center py-4 border-b border-[var(--kiburd-bg-secondary)]">
+                    <span className="kiburd-text-primary text-xl font-medium">Accuracy</span>
+                    <span className="kiburd-text-primary font-bold text-2xl">{results.accuracy}%</span>
+                </div>
+
+                {/* Correct Words */}
+                <div className="flex justify-between items-center py-4 border-b border-[var(--kiburd-bg-secondary)]">
+                    <span className="kiburd-text-primary text-xl font-medium">Correct words</span>
+                    <span className="text-green-600 font-bold text-2xl">{correctWords}</span>
+                </div>
+
+                {/* Wrong Words */}
+                <div className="flex justify-between items-center py-4 border-b border-[var(--kiburd-bg-secondary)]">
+                    <span className="kiburd-text-primary text-xl font-medium">Wrong words</span>
+                    <span className="text-red-600 font-bold text-2xl">{wrongWords}</span>
+                </div>
             </div>
         </div>
     );
