@@ -243,31 +243,33 @@ export default function CoursePage() {
                                     onRestart={repeatLevel}
                                 />
 
-                                <div className="flex gap-4 justify-center">
-                                    {getPreviousLevel() && (
-                                        <button
-                                            onClick={goToPreviousLevel}
-                                            className="px-6 py-3 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:kiburd-bg-primary transition-colors"
-                                        >
-                                            ← Anterior
-                                        </button>
-                                    )}
-
+                                <div className="    flex flex-col gap-4 items-center">
                                     <button
                                         onClick={repeatLevel}
-                                        className="px-6 py-3 bg-blue-600 text-white rounded-lg hover:bg-blue-700 transition-colors"
+                                        className="px-12 py-3 bg-blue-800 text-white rounded-lg hover:bg-blue-700 transition-colors w-full max-w-xs"
                                     >
-                                        🔄 Repetir
+                                        ⟲ Repetir
                                     </button>
 
-                                    {getNextLevel() && (
-                                        <button
-                                            onClick={goToNextLevel}
-                                            className="px-6 py-3 bg-green-600 text-white rounded-lg hover:bg-green-700 transition-colors"
-                                        >
-                                            Siguiente →
-                                        </button>
-                                    )}
+                                    <div className="flex gap-4 justify-center">
+                                        {getPreviousLevel() && (
+                                            <button
+                                                onClick={goToPreviousLevel}
+                                                className="px-9 py-3 bg-red-900 hover:bg-red-800 kiburd-text-primary rounded-lg transition-colors"
+                                            >
+                                                ← Anterior
+                                            </button>
+                                        )}
+
+                                        {getNextLevel() && (
+                                            <button
+                                                onClick={goToNextLevel}
+                                                className="px-9 py-3 bg-green-900 text-white rounded-lg hover:bg-green-800 transition-colors"
+                                            >
+                                                Siguiente →
+                                            </button>
+                                        )}
+                                    </div>
                                 </div>
                             </div>
                         )}
