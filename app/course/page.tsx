@@ -28,7 +28,7 @@ export default function CoursePage() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('/course-data.json')
+        fetch('doc/course-data.json')
             .then(response => response.json())
             .then((data: CourseData) => {
                 setCourseData(data);
@@ -163,19 +163,26 @@ export default function CoursePage() {
                 {currentPhase === null && (
                     <div className="space-y-6">
                         <h2 className="text-2xl font-semibold kiburd-text-primary mb-6">Selecciona una fase:</h2>
-                        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-7">
                             {courseData.phases.map((phase) => (
                                 <div
                                     key={phase.id}
                                     onClick={() => setCurrentPhase(phase.id)}
-                                    className="kiburd-bg-secondary p-6 rounded-lg border-2 border-[var(--kiburd-bg-secondary)] hover:border-green-600 cursor-pointer transition-colors"
+                                    className="kiburd-btn-success p-6 rounded-lg border-2 border-[var(--kiburd-bg-secondary)] hover:border-green-600 cursor-pointer transition-all hover:scale-105"
                                 >
-                                    <h3 className="text-xl font-semibold kiburd-text-primary mb-2">
-                                        {phase.title}
-                                    </h3>
-                                    <p className="kiburd-text-primary opacity-80">
-                                        {phase.levels.length} niveles
-                                    </p>
+                                    <div className="flex flex-col items-center">
+                                        <div className="w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-xl shadow-lg border-2 border-white">
+                                            {phase.id}
+                                        </div>
+                                        <img
+                                            src={`/img/phases/${phase.id}.png`}
+                                            alt={phase.title}
+                                            className="w-32 h-32 object-contain"
+                                        />
+                                        <p className="kiburd-text-primary opacity-80">
+                                            {phase.levels.length} niveles
+                                        </p>
+                                    </div>
                                 </div>
                             ))}
                         </div>
@@ -197,7 +204,7 @@ export default function CoursePage() {
                             </h2>
                         </div>
 
-                        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-3">
+                        <div className="grid gap-4 md:grid-cols-2 lg:grid-cols-6">
                             {courseData.phases.find(p => p.id === currentPhase)?.levels.map((level) => (
                                 <div
                                     key={level.id}

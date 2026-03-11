@@ -9,10 +9,10 @@ interface UrduKeyboardProps {
 
 // Urdu Phonetic keyboard layout matching QWERTY positions
 const URDU_KEYBOARD_LAYOUT = [
-    // Numbers row (decorative only)
+    // Numbers row (now selectable)
     {
         keys: ['۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', '۰', 'أ', 'ؤ'],
-        isDecorative: true
+        isDecorative: false
     },
     // First row (Q-P) - QWERTY positions
     {
@@ -26,7 +26,7 @@ const URDU_KEYBOARD_LAYOUT = [
     },
     // Third row (Z-M) - ZXCV positions
     {
-        keys: ['ز', 'ش', 'چ', 'ط', 'ب', 'ن', 'م', '،', '۔', 'ْ'],
+        keys: ['ز', 'ش', 'چ', 'ط', 'ب', 'ن', 'م', ',', '۔', 'ْ'],
         isDecorative: false
     },
     // Space bar row

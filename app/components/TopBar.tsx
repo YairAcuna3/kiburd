@@ -13,7 +13,7 @@ export default function TopBar() {
                     {/* Logo y nombre */}
                     <Link href="/" className="flex items-center gap-3 hover:opacity-80 transition-opacity">
                         <img
-                            src="/KiburdLogo.png"
+                            src="img/KiburdLogo.png"
                             alt="Bandera de Pakistán"
                             className="w-10 h-7 object-cover rounded shadow-sm"
                         />

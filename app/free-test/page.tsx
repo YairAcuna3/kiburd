@@ -35,10 +35,14 @@ export default function FreeTestPage() {
 
     const selectAllKeys = () => {
         const allKeys = new Set([
-            // Only selectable keys (not decorative)
+            // Numbers row
+            '۱', '۲', '۳', '۴', '۵', '۶', '۷', '۸', '۹', '۰', 'أ', 'ؤ',
+            // First row
             'ق', 'و', 'ع', 'ر', 'ت', 'ے', 'ء', 'ی', 'ہ', 'پ', '[', ']',
+            // Second row
             'ا', 'س', 'د', 'ف', 'گ', 'ح', 'ج', 'ک', 'ل', '؛', "'",
-            'ز', 'ش', 'چ', 'ط', 'ب', 'ن', 'م', '،', '۔', '/', 'ھ', 'ئ', '؎', ' ْ',
+            // Third row
+            'ز', 'ش', 'چ', 'ط', 'ب', 'ن', 'م', ',', '۔', '/', 'ھ', 'ئ', '؎', ' ْ',
         ]);
         setSelectedKeys(allKeys);
     };
