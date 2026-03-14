@@ -20,7 +20,37 @@ interface CourseData {
     phases: Phase[];
 }
 
+type CourseId = 'urdu' | 'armenian';
+
+const COURSES: { id: CourseId; label: string; file: string; title: string; gradient: string; cardBg: string; cardBorder: string; badgeBg: string; backHover: string; flag: string }[] = [
+    {
+        id: 'urdu',
+        label: 'Urdu (Pakistan)',
+        file: 'doc/urdu-course-data.json',
+        title: 'Curso de Mecanografía Urdu',
+        gradient: 'from-[#01411c] to-[#5d993e]',
+        cardBg: 'bg-green-700 hover:bg-green-800',
+        cardBorder: 'hover:border-green-600',
+        badgeBg: 'bg-green-600',
+        backHover: 'hover:bg-green-600',
+        flag: '/img/flags/Pakistan.png',
+    },
+    {
+        id: 'armenian',
+        label: 'Armenian (Typewriter)',
+        file: 'doc/armenian-course-data.json',
+        title: 'Curso de Mecanografía Armenio',
+        gradient: 'from-[#3a0a0a] to-[#9e3a3a]',
+        cardBg: 'bg-red-900 hover:bg-red-800',
+        cardBorder: 'hover:border-red-700',
+        badgeBg: 'bg-red-800',
+        backHover: 'hover:bg-red-800',
+        flag: '/img/flags/Armenia.png',
+    },
+];
+
 export default function CoursePage() {
+    const [selectedCourse, setSelectedCourse] = useState<CourseId>('urdu');
     const [courseData, setCourseData] = useState<CourseData | null>(null);
     const [currentPhase, setCurrentPhase] = useState<number | null>(null);
     const [currentLevel, setCurrentLevel] = useState<number | null>(null);
@@ -28,7 +58,13 @@ export default function CoursePage() {
     const [loading, setLoading] = useState(true);
 
     useEffect(() => {
-        fetch('doc/course-data.json')
+        setLoading(true);
+        setCourseData(null);
+        setCurrentPhase(null);
+        setCurrentLevel(null);
+        setTestResults(null);
+        const course = COURSES.find(c => c.id === selectedCourse)!;
+        fetch(course.file)
             .then(response => response.json())
             .then((data: CourseData) => {
                 setCourseData(data);
@@ -38,7 +74,7 @@ export default function CoursePage() {
                 console.error('Error loading course data:', error);
                 setLoading(false);
             });
-    }, []);
+    }, [selectedCourse]);
 
     const handleTestComplete = (results: TestResults) => {
         setTestResults(results);
@@ -134,6 +170,8 @@ export default function CoursePage() {
         setTestResults(null);
     };
 
+    const activeCourse = COURSES.find(c => c.id === selectedCourse)!;
+
     if (loading) {
         return (
             <div className="min-h-screen kiburd-bg-primary flex items-center justify-center">
@@ -153,11 +191,30 @@ export default function CoursePage() {
     const currentLevelData = getCurrentLevel();
 
     return (
-        <div className="min-h-screen bg-linear-to-br from-[#01411c] to-[#5d993e]">
+        <div className={`min-h-screen bg-linear-to-br ${activeCourse.gradient}`}>
             <div className="container mx-auto px-4 py-8">
-                <h1 className="text-4xl font-bold kiburd-text-primary mb-8 text-center">
-                    Curso de Mecanografía Urdu
+                {/* Course selector */}
+                <div className="flex justify-center gap-3 mb-6">
+                    {COURSES.map(course => (
+                        <button
+                            key={course.id}
+                            onClick={() => setSelectedCourse(course.id)}
+                            className={`px-5 py-2 rounded-full font-semibold transition-all border-2 ${selectedCourse === course.id
+                                ? 'bg-white text-black border-white shadow-lg scale-105'
+                                : 'bg-transparent kiburd-text-primary border-white/40 hover:border-white/80'
+                                }`}
+                        >
+                            {course.label}
+                        </button>
+                    ))}
+                </div>
+
+                <h1 className="text-4xl font-bold kiburd-text-primary mb-4 text-center">
+                    {activeCourse.title}
                 </h1>
+                <div className="flex justify-center mb-8">
+                    <img src={activeCourse.flag} alt={activeCourse.label} className="h-20 rounded shadow-md" />
+                </div>
 
                 {/* Vista de fases */}
                 {currentPhase === null && (
@@ -168,10 +225,10 @@ export default function CoursePage() {
                                 <div
                                     key={phase.id}
                                     onClick={() => setCurrentPhase(phase.id)}
-                                    className="kiburd-btn-success p-6 rounded-lg border-2 border-[var(--kiburd-bg-secondary)] hover:border-green-600 cursor-pointer transition-all hover:scale-105"
+                                    className={`${activeCourse.cardBg} p-6 rounded-lg border-2 border-[var(--kiburd-bg-secondary)] ${activeCourse.cardBorder} cursor-pointer transition-all hover:scale-105`}
                                 >
                                     <div className="flex flex-col items-center">
-                                        <div className="w-12 h-12 rounded-full bg-green-600 text-white flex items-center justify-center font-bold text-xl shadow-lg border-2 border-white">
+                                        <div className={`w-12 h-12 rounded-full ${activeCourse.badgeBg} text-white flex items-center justify-center font-bold text-xl shadow-lg border-2 border-white`}>
                                             {phase.id}
                                         </div>
                                         <img
@@ -195,7 +252,7 @@ export default function CoursePage() {
                         <div className="flex items-center gap-4 mb-6">
                             <button
                                 onClick={goBackToPhases}
-                                className="px-4 py-2 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:bg-green-600 hover:text-white hover:-translate-x-1 hover:-translate-y-1 hover:-rotate-2 transition-all duration-300 shadow-md hover:shadow-lg"
+                                className={`px-4 py-2 kiburd-bg-secondary kiburd-text-primary rounded-lg ${activeCourse.backHover} hover:text-white hover:-translate-x-1 hover:-translate-y-1 hover:-rotate-2 transition-all duration-300 shadow-md hover:shadow-lg`}
                             >
                                 ← Volver a fases
                             </button>
@@ -209,12 +266,12 @@ export default function CoursePage() {
                                 <div
                                     key={level.id}
                                     onClick={() => setCurrentLevel(level.id)}
-                                    className="kiburd-bg-secondary p-6 rounded-lg border-2 border-[var(--kiburd-bg-secondary)] hover:border-green-600 cursor-pointer transition-colors"
+                                    className={`kiburd-bg-secondary p-6 rounded-lg border-2 border-[var(--kiburd-bg-secondary)] ${activeCourse.cardBorder} cursor-pointer transition-colors`}
                                 >
                                     <h3 className="text-xl font-semibold kiburd-text-primary mb-2">
                                         {level.title}
                                     </h3>
-                                    <p className="kiburd-text-primary opacity-80 font-mono text-lg">
+                                    <p className="kiburd-text-primary opacity-80 font-mono text-lg break-all">
                                         {level.letters}
                                     </p>
                                 </div>
@@ -229,7 +286,7 @@ export default function CoursePage() {
                         <div className="flex items-center gap-4 mb-6">
                             <button
                                 onClick={goBackToLevels}
-                                className="px-4 py-2 kiburd-bg-secondary kiburd-text-primary rounded-lg hover:bg-green-600 hover:text-white hover:-translate-x-1 hover:-translate-y-1 hover:-rotate-2 transition-all duration-300 shadow-md hover:shadow-lg"
+                                className={`px-4 py-2 kiburd-bg-secondary kiburd-text-primary rounded-lg ${activeCourse.backHover} hover:text-white hover:-translate-x-1 hover:-translate-y-1 hover:-rotate-2 transition-all duration-300 shadow-md hover:shadow-lg`}
                             >
                                 ← Volver a niveles
                             </button>
@@ -242,6 +299,7 @@ export default function CoursePage() {
                             <CourseTypingTest
                                 text={currentLevelData.letters}
                                 onTestComplete={handleTestComplete}
+                                keyboard={selectedCourse === 'armenian' ? 'armenian' : 'urdu'}
                             />
                         ) : (
                             <div className="space-y-6">

@@ -2,10 +2,12 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import UrduKeyboard from './UrduKeyboard';
+import ArmenianKeyboard from './ArmenianKeyboard';
 
 interface CourseTypingTestProps {
     text: string;
     onTestComplete: (results: TestResults) => void;
+    keyboard?: 'urdu' | 'armenian';
 }
 
 export interface TestResults {
@@ -16,7 +18,7 @@ export interface TestResults {
     totalKeys: number;
 }
 
-export default function CourseTypingTest({ text, onTestComplete }: CourseTypingTestProps) {
+export default function CourseTypingTest({ text, onTestComplete, keyboard = 'urdu' }: CourseTypingTestProps) {
     const [isActive, setIsActive] = useState(false);
     const [isReady, setIsReady] = useState(true);
     const [timeLeft, setTimeLeft] = useState(30); // 30 segundos fijos
@@ -281,14 +283,23 @@ export default function CourseTypingTest({ text, onTestComplete }: CourseTypingT
                     <span>Total: {correctKeys + incorrectKeys}</span>
                 </div>
 
-                {/* Teclado Urdu mostrando la tecla presionada y la siguiente */}
+                {/* Teclado mostrando la tecla presionada y la siguiente */}
                 <div className="mt-6">
-                    <UrduKeyboard
-                        selectedKeys={new Set([pressedKey])}
-                        nextKey={nextKey}
-                        onKeyToggle={() => { }}
-                        showNextKey={true}
-                    />
+                    {keyboard === 'armenian' ? (
+                        <ArmenianKeyboard
+                            selectedKeys={new Set([pressedKey])}
+                            nextKey={nextKey}
+                            onKeyToggle={() => { }}
+                            showNextKey={true}
+                        />
+                    ) : (
+                        <UrduKeyboard
+                            selectedKeys={new Set([pressedKey])}
+                            nextKey={nextKey}
+                            onKeyToggle={() => { }}
+                            showNextKey={true}
+                        />
+                    )}
                 </div>
             </div>
         </div>

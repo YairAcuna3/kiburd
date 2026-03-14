@@ -2,52 +2,52 @@
   "phases": [
     {
       "id": 1,
-      "title": "1: Fila media",
+      "title": "1: Fila media (home row)",
       "levels": [
         {
           "id": 1,
           "title": "Nivel 1",
-          "letters": "فج"
+          "letters": "եի"
         },
         {
           "id": 2,
           "title": "Nivel 2",
-          "letters": "دک"
+          "letters": "գտ"
         },
         {
           "id": 3,
           "title": "Nivel 3",
-          "letters": "فجدک"
+          "letters": "գեիտ"
         },
         {
           "id": 4,
           "title": "Nivel 4",
-          "letters": "سل"
+          "letters": "վհ"
         },
         {
           "id": 5,
           "title": "Nivel 5",
-          "letters": "ا؛"
+          "letters": "ջպ"
         },
         {
           "id": 6,
           "title": "Nivel 6",
-          "letters": "سلا؛"
+          "letters": "ջվհպ"
         },
         {
           "id": 7,
           "title": "Nivel 7",
-          "letters": "فجدکسلا؛"
+          "letters": "ջվգեիտհպ"
         },
         {
           "id": 8,
           "title": "Nivel 8",
-          "letters": "گھ"
+          "letters": "ան"
         },
         {
           "id": 9,
           "title": "Nivel 9",
-          "letters": "فجدکسلا؛ھگ"
+          "letters": "ջվգեանիտհպ"
         }
       ]
     },
@@ -58,47 +58,47 @@
         {
           "id": 10,
           "title": "Nivel 10",
-          "letters": "رئ"
+          "letters": "սւ"
         },
         {
           "id": 11,
           "title": "Nivel 11",
-          "letters": "عی"
+          "letters": "բկ"
         },
         {
           "id": 12,
           "title": "Nivel 12",
-          "letters": "رئعی"
+          "letters": "բսւկ"
         },
         {
           "id": 13,
           "title": "Nivel 13",
-          "letters": "وہ"
+          "letters": "փը"
         },
         {
           "id": 14,
           "title": "Nivel 14",
-          "letters": "قپ"
+          "letters": "ճթ"
         },
         {
           "id": 15,
           "title": "Nivel 15",
-          "letters": "وہقپ"
+          "letters": "ճփըթ"
         },
         {
           "id": 16,
           "title": "Nivel 16",
-          "letters": "رئعیوہقپ"
+          "letters": "ճփբսւկըթ"
         },
         {
           "id": 17,
           "title": "Nivel 17",
-          "letters": "تے"
+          "letters": "մո"
         },
         {
           "id": 18,
           "title": "Nivel 18",
-          "letters": "رئعیوہقپتے"
+          "letters": "ճփբսմուկըթ"
         }
       ]
     },
@@ -107,49 +107,49 @@
       "title": "3: Fila media y superior",
       "levels": [
         {
-          "id": "19",
+          "id": 19,
           "title": "Nivel 19",
-          "letters": "فجرئ"
+          "letters": "եիսւ"
         },
         {
-          "id": "20",
+          "id": 20,
           "title": "Nivel 20",
-          "letters": "دکعی"
+          "letters": "գտբկ"
         },
         {
-          "id": "21",
+          "id": 21,
           "title": "Nivel 21",
-          "letters": "فجدکعیرئ"
+          "letters": "բսւկգեիտ"
         },
         {
-          "id": "22",
+          "id": 22,
           "title": "Nivel 22",
-          "letters": "سلوہ"
+          "letters": "վհփը"
         },
         {
-          "id": "23",
+          "id": 23,
           "title": "Nivel 23",
-          "letters": "ا؛قپ"
+          "letters": "ջպճթ"
         },
         {
-          "id": "24",
+          "id": 24,
           "title": "Nivel 24",
-          "letters": "ا؛قپسلوہ"
+          "letters": "ջվհպճփըթ"
         },
         {
-          "id": "25",
+          "id": 25,
           "title": "Nivel 25",
-          "letters": "فجرئدکعیسلوہا؛قپ"
+          "letters": "ճփբսւկըթջվգեիտհպ"
         },
         {
-          "id": "26",
+          "id": 26,
           "title": "Nivel 26",
-          "letters": "گھتے"
+          "letters": "մոան"
         },
         {
-          "id": "27",
+          "id": 27,
           "title": "Nivel 27",
-          "letters": "فجدکسلا؛قپوہعیرئتےگھ"
+          "letters": "ճփբսմուկըթջվգեանիտհպ"
         }
       ]
     },
@@ -158,49 +158,49 @@
       "title": "4: Fila inferior",
       "levels": [
         {
-          "id": "28",
+          "id": 28,
           "title": "Nivel 28",
-          "letters": "طن"
+          "letters": "յլ"
         },
         {
-          "id": "29",
+          "id": 29,
           "title": "Nivel 29",
-          "letters": "چم"
+          "letters": "չք"
         },
         {
-          "id": "30",
+          "id": 30,
           "title": "Nivel 30",
-          "letters": "طنچم"
+          "letters": "չյլք"
         },
         {
-          "id": "31",
+          "id": 31,
           "title": "Nivel 31",
-          "letters": "ش,"
+          "letters": "դխ"
         },
         {
-          "id": "32",
+          "id": 32,
           "title": "Nivel 32",
-          "letters": "ز۔"
+          "letters": "ժշ"
         },
         {
-          "id": "33",
+          "id": 33,
           "title": "Nivel 33",
-          "letters": "ش,ز۔"
+          "letters": "ժդխշ"
         },
         {
-          "id": "34",
+          "id": 34,
           "title": "Nivel 34",
-          "letters": "طچشزنم,۔"
+          "letters": "ժդչյլքխշ"
         },
         {
-          "id": "35",
+          "id": 35,
           "title": "Nivel 35",
-          "letters": "بطن"
+          "letters": "յզլ"
         },
         {
-          "id": "36",
+          "id": 36,
           "title": "Nivel 36",
-          "letters": "زشچطبنم,۔"
+          "letters": "ժդչյզլքխշ"
         }
       ]
     },
@@ -209,49 +209,49 @@
       "title": "5: Fila media e inferior",
       "levels": [
         {
-          "id": "37",
+          "id": 37,
           "title": "Nivel 37",
-          "letters": "فجطن"
+          "letters": "եիյլ"
         },
         {
-          "id": "38",
+          "id": 38,
           "title": "Nivel 38",
-          "letters": "دکچم"
+          "letters": "գտչք"
         },
         {
-          "id": "39",
+          "id": 39,
           "title": "Nivel 39",
-          "letters": "فجدکطنچم"
+          "letters": "գեիտչյլք"
         },
         {
-          "id": "40",
+          "id": 40,
           "title": "Nivel 40",
-          "letters": "سلش۔"
+          "letters": "վհդխ"
         },
         {
-          "id": "41",
+          "id": 41,
           "title": "Nivel 41",
-          "letters": "ا؛ز۔"
+          "letters": "ջպժշ"
         },
         {
-          "id": "42",
+          "id": 42,
           "title": "Nivel 42",
-          "letters": "سلا؛زش۔,"
+          "letters": "ջվհպժդխշ"
         },
         {
-          "id": "43",
+          "id": 43,
           "title": "Nivel 43",
-          "letters": "فجدکسلا؛ز۔ش,چمطن"
+          "letters": "ջվգեիտհպժդչյլքխշ"
         },
         {
-          "id": "44",
+          "id": 44,
           "title": "Nivel 44",
-          "letters": "گھبطن"
+          "letters": "անյզլ"
         },
         {
-          "id": "45",
+          "id": 45,
           "title": "Nivel 45",
-          "letters": "؛السکدجفگھ۔ز,شمچنطب"
+          "letters": "ջվգեանիտհպժդչյզլքխշ"
         }
       ]
     },
@@ -260,49 +260,49 @@
       "title": "6: Todas las filas",
       "levels": [
         {
-          "id": "46",
+          "id": 46,
           "title": "Nivel 46",
-          "letters": "رئفجطن"
+          "letters": "սւեիյլ"
         },
         {
-          "id": "47",
+          "id": 47,
           "title": "Nivel 47",
-          "letters": "عیدکچم"
+          "letters": "բկգտչք"
         },
         {
-          "id": "48",
+          "id": 48,
           "title": "Nivel 48",
-          "letters": "رئفجطنعیدکچم"
+          "letters": "բսւկգեիտչյլք"
         },
         {
-          "id": "49",
+          "id": 49,
           "title": "Nivel 49",
-          "letters": "وہسلش,"
+          "letters": "փըվհդխ"
         },
         {
-          "id": "50",
+          "id": 50,
           "title": "Nivel 50",
-          "letters": "قپا؛ز۔"
+          "letters": "ճթջպժշ"
         },
         {
-          "id": "51",
+          "id": 51,
           "title": "Nivel 51",
-          "letters": "وہسلش,قپا؛ز۔"
+          "letters": "ճփըթջվհպժդխշ"
         },
         {
-          "id": "52",
+          "id": 52,
           "title": "Nivel 52",
-          "letters": "قوعرئیہپاسدفجکل؛زشچطنم,۔"
+          "letters": "ճփբսւկըթջվգեիտհպժդչյլքխշ"
         },
         {
-          "id": "53",
+          "id": 53,
           "title": "Nivel 53",
-          "letters": "تےگھطبن"
+          "letters": "մոանյզլ"
         },
         {
-          "id": "54",
+          "id": 54,
           "title": "Nivel 54",
-          "letters": "قوعرتےئیہپاسدفگھجکل؛زشچطبنم,۔"
+          "letters": "ճփբսմուկըթջվգեանիտհպժդչյզլքխշ"
         }
       ]
     },
@@ -311,29 +311,29 @@
       "title": "7: Números",
       "levels": [
         {
-          "id": "55",
+          "id": 55,
           "title": "Nivel 55",
-          "letters": "۱۲۰"
+          "letters": "ֆձօ"
         },
         {
-          "id": "56",
+          "id": 56,
           "title": "Nivel 56",
-          "letters": "۳۴۸۹"
+          "letters": "-,՛)"
         },
         {
-          "id": "57",
+          "id": 57,
           "title": "Nivel 57",
-          "letters": "۱۲۳۴۸۹۰"
+          "letters": "ֆձօ-,՛)"
         },
         {
-          "id": "58",
+          "id": 58,
           "title": "Nivel 58",
-          "letters": "۵۶۷"
+          "letters": "։՞․"
         },
         {
-          "id": "59",
+          "id": 59,
           "title": "Nivel 59",
-          "letters": "۱۲۳۴۵۶۷۸۹۰"
+          "letters": "ֆձ-,։՞․՛)օ"
         }
       ]
     }

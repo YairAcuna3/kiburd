@@ -2,12 +2,14 @@
 
 import { useState, useEffect, useRef, useCallback } from 'react';
 import UrduKeyboard from './UrduKeyboard';
+import ArmenianKeyboard from './ArmenianKeyboard';
 
 interface TypingTestProps {
     selectedKeys: Set<string>;
     testDuration: number;
     onTestComplete: (results: TestResults) => void;
     onTimeChange?: (duration: number) => void;
+    keyboard?: 'urdu' | 'armenian';
 }
 
 export interface TestResults {
@@ -18,7 +20,7 @@ export interface TestResults {
     totalKeys: number;
 }
 
-export default function TypingTest({ selectedKeys, testDuration, onTestComplete, onTimeChange }: TypingTestProps) {
+export default function TypingTest({ selectedKeys, testDuration, onTestComplete, onTimeChange, keyboard = 'urdu' }: TypingTestProps) {
     const [isActive, setIsActive] = useState(false);
     const [isReady, setIsReady] = useState(false);
     const [timeLeft, setTimeLeft] = useState(testDuration);
@@ -287,13 +289,21 @@ export default function TypingTest({ selectedKeys, testDuration, onTestComplete,
                         <span>Total: {correctKeys + incorrectKeys}</span>
                     </div>
 
-                    {/* Teclado Urdu durante el test */}
+                    {/* Teclado durante el test */}
                     <div className="mt-6">
-                        <UrduKeyboard
-                            selectedKeys={new Set([pressedKey])}
-                            onKeyToggle={() => { }} // No necesitamos funcionalidad de toggle durante el test
-                            showNextKey={false}
-                        />
+                        {keyboard === 'armenian' ? (
+                            <ArmenianKeyboard
+                                selectedKeys={new Set([pressedKey])}
+                                onKeyToggle={() => { }}
+                                showNextKey={false}
+                            />
+                        ) : (
+                            <UrduKeyboard
+                                selectedKeys={new Set([pressedKey])}
+                                onKeyToggle={() => { }}
+                                showNextKey={false}
+                            />
+                        )}
                     </div>
                 </div>
             )}
