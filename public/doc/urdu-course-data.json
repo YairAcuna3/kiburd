@@ -100,7 +100,23 @@
     },
     {
       "id": 7,
-      "title": "7: Números",
+      "title": "7: Otras letras",
+      "levels": [
+        { "id": "55", "title": "Nivel 55", "letters": "ڈآ" },
+        { "id": "56", "title": "Nivel 56", "letters": "ڑث" },
+        { "id": "57", "title": "Nivel 57", "letters": "آڈٹڑ" },
+        { "id": "58", "title": "Nivel 58", "letters": "ٹں" },
+        { "id": "59", "title": "Nivel 59", "letters": "صح" },
+        { "id": "60", "title": "Nivel 60", "letters": "ںٹصح" },
+        { "id": "61", "title": "Nivel 61", "letters": "غض" },
+        { "id": "62", "title": "Nivel 62", "letters": "" },
+        { "id": "63", "title": "Nivel 63", "letters": "" },
+        { "id": "64", "title": "Nivel 64", "letters": "" }
+      ]
+    },
+    {
+      "id": 8,
+      "title": "8: Números",
       "levels": [
         { "id": "55", "title": "Nivel 55", "letters": "۱۲۰" },
         { "id": "56", "title": "Nivel 56", "letters": "۳۴۸۹" },
