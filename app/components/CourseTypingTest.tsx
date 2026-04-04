@@ -5,7 +5,8 @@ import UrduKeyboard from './UrduKeyboard';
 import ArmenianKeyboard from './ArmenianKeyboard';
 
 interface CourseTypingTestProps {
-    text: string;
+    text?: string;
+    words?: string[];
     onTestComplete: (results: TestResults) => void;
     keyboard?: 'urdu' | 'armenian';
 }
@@ -18,7 +19,7 @@ export interface TestResults {
     totalKeys: number;
 }
 
-export default function CourseTypingTest({ text, onTestComplete, keyboard = 'urdu' }: CourseTypingTestProps) {
+export default function CourseTypingTest({ text, words, onTestComplete, keyboard = 'urdu' }: CourseTypingTestProps) {
     const [isActive, setIsActive] = useState(false);
     const [isReady, setIsReady] = useState(true);
     const [timeLeft, setTimeLeft] = useState(30); // 30 segundos fijos
@@ -34,20 +35,26 @@ export default function CourseTypingTest({ text, onTestComplete, keyboard = 'urd
     const inputRef = useRef<HTMLInputElement>(null);
     const intervalRef = useRef<NodeJS.Timeout | null>(null);
 
-    // Generate random text from level characters
+    // Generate random text from level characters and/or words
     const generateRandomText = useCallback(() => {
-        const chars = text.split('');
-        if (chars.length === 0) return '';
+        const chars = text ? text.split('') : [];
+        const hasChars = chars.length > 0;
+        const hasWords = words && words.length > 0;
 
-        let randomText = '';
-        for (let i = 0; i < 100; i++) { // Generate 100 characters
-            const randomChar = chars[Math.floor(Math.random() * chars.length)];
-            randomText += randomChar;
-            // Add spaces occasionally for better practice
-            if (i < 99 && Math.random() > 0.8) randomText += ' ';
+        if (!hasChars && !hasWords) return '';
+
+        const pool: string[] = [];
+        if (hasChars) chars.forEach(c => pool.push(c));
+        if (hasWords) words!.forEach(w => { pool.push(w); pool.push(w); });
+
+        let result = '';
+        for (let i = 0; i < 80; i++) {
+            const token = pool[Math.floor(Math.random() * pool.length)];
+            result += token;
+            if (i < 79) result += ' ';
         }
-        return randomText;
-    }, [text]);
+        return result;
+    }, [text, words]);
 
     const finishTest = useCallback(() => {
         if (isCompleted) return;
@@ -183,7 +190,7 @@ export default function CourseTypingTest({ text, onTestComplete, keyboard = 'urd
 
     useEffect(() => {
         resetTest();
-    }, [text, generateRandomText]);
+    }, [text, words, generateRandomText]);
 
     useEffect(() => {
         if (isReady && inputRef.current) {

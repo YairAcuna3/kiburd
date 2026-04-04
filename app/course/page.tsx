@@ -7,7 +7,8 @@ import TestResultsComponent from '../components/TestResults';
 interface Level {
     id: number;
     title: string;
-    letters: string;
+    letters?: string;
+    words?: string[];
 }
 
 interface Phase {
@@ -272,7 +273,7 @@ export default function CoursePage() {
                                         {level.title}
                                     </h3>
                                     <p className="kiburd-text-primary opacity-80 font-mono text-lg break-all">
-                                        {level.letters}
+                                        {level.letters ?? level.words?.join(' ')}
                                     </p>
                                 </div>
                             ))}
@@ -298,6 +299,7 @@ export default function CoursePage() {
                         {!testResults ? (
                             <CourseTypingTest
                                 text={currentLevelData.letters}
+                                words={currentLevelData.words}
                                 onTestComplete={handleTestComplete}
                                 keyboard={selectedCourse === 'armenian' ? 'armenian' : 'urdu'}
                             />
