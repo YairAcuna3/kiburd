@@ -21,7 +21,7 @@ interface CourseData {
     phases: Phase[];
 }
 
-type CourseId = 'urdu' | 'armenian';
+type CourseId = 'urdu' | 'armenian' | 'russian';
 
 const COURSES: { id: CourseId; label: string; file: string; title: string; gradient: string; cardBg: string; cardBorder: string; badgeBg: string; backHover: string; flag: string }[] = [
     {
@@ -47,6 +47,18 @@ const COURSES: { id: CourseId; label: string; file: string; title: string; gradi
         badgeBg: 'bg-red-800',
         backHover: 'hover:bg-red-800',
         flag: '/img/flags/Armenia.png',
+    },
+    {
+        id: 'russian',
+        label: 'Ruso (Rusia)',
+        file: 'doc/russian-course-data.json',
+        title: 'Curso de Mecanografía Ruso',
+        gradient: 'from-[#0a1a3a] to-[#1a3a6e]',
+        cardBg: 'bg-blue-900 hover:bg-blue-800',
+        cardBorder: 'hover:border-blue-700',
+        badgeBg: 'bg-blue-800',
+        backHover: 'hover:bg-blue-800',
+        flag: '/img/flags/Russia.svg',
     },
 ];
 
@@ -301,7 +313,7 @@ export default function CoursePage() {
                                 text={currentLevelData.letters}
                                 words={currentLevelData.words}
                                 onTestComplete={handleTestComplete}
-                                keyboard={selectedCourse === 'armenian' ? 'armenian' : 'urdu'}
+                                keyboard={selectedCourse === 'armenian' ? 'armenian' : selectedCourse === 'russian' ? 'russian' : 'urdu'}
                             />
                         ) : (
                             <div className="space-y-6">

@@ -3,12 +3,13 @@
 import { useState, useEffect, useRef, useCallback } from 'react';
 import UrduKeyboard from './UrduKeyboard';
 import ArmenianKeyboard from './ArmenianKeyboard';
+import RussianKeyboard from './RussianKeyboard';
 
 interface CourseTypingTestProps {
     text?: string;
     words?: string[];
     onTestComplete: (results: TestResults) => void;
-    keyboard?: 'urdu' | 'armenian';
+    keyboard?: 'urdu' | 'armenian' | 'russian';
 }
 
 export interface TestResults {
@@ -294,6 +295,13 @@ export default function CourseTypingTest({ text, words, onTestComplete, keyboard
                 <div className="mt-6">
                     {keyboard === 'armenian' ? (
                         <ArmenianKeyboard
+                            selectedKeys={new Set([pressedKey])}
+                            nextKey={nextKey}
+                            onKeyToggle={() => { }}
+                            showNextKey={true}
+                        />
+                    ) : keyboard === 'russian' ? (
+                        <RussianKeyboard
                             selectedKeys={new Set([pressedKey])}
                             nextKey={nextKey}
                             onKeyToggle={() => { }}
