@@ -44,17 +44,33 @@ export default function CourseTypingTest({ text, words, onTestComplete, keyboard
 
         if (!hasChars && !hasWords) return '';
 
-        const pool: string[] = [];
-        if (hasChars) chars.forEach(c => pool.push(c));
-        if (hasWords) words!.forEach(w => { pool.push(w); pool.push(w); });
-
-        let result = '';
-        for (let i = 0; i < 80; i++) {
-            const token = pool[Math.floor(Math.random() * pool.length)];
-            result += token;
-            if (i < 79) result += ' ';
+        // Words-only mode: keep original behaviour (words separated by spaces)
+        if (!hasChars && hasWords) {
+            return Array.from({ length: 20 }, () =>
+                words![Math.floor(Math.random() * words!.length)]
+            ).join(' ');
         }
-        return result;
+
+        // Letters mode (with optional words mixed in): build random-length blocks
+        const wordPool = hasWords ? words! : [];
+        const tokens: string[] = [];
+
+        while (tokens.join(' ').length < 200) {
+            // Occasionally insert a word from the word pool
+            if (wordPool.length > 0 && Math.random() < 0.2) {
+                tokens.push(wordPool[Math.floor(Math.random() * wordPool.length)]);
+            } else {
+                // Build a block of 3–7 random characters
+                const blockLen = 3 + Math.floor(Math.random() * 5);
+                let block = '';
+                for (let i = 0; i < blockLen; i++) {
+                    block += chars[Math.floor(Math.random() * chars.length)];
+                }
+                tokens.push(block);
+            }
+        }
+
+        return tokens.join(' ');
     }, [text, words]);
 
     const finishTest = useCallback(() => {
