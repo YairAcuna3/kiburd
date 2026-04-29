@@ -10,15 +10,15 @@ interface GreekKeyboardProps {
 // Greek keyboard layout (QWERTY positions)
 const GREEK_KEYBOARD_LAYOUT = [
     {
-        keys: ['ς', 'ε', 'ρ', 'τ', 'υ', 'θ', 'ι', 'ο', 'π', 'ω'],
+        keys: [';', 'ς', 'ε', 'ρ', 'τ', 'υ', 'θ', 'ι', 'ο', 'π'],
         isDecorative: false
     },
     {
-        keys: ['α', 'σ', 'δ', 'φ', 'γ', 'η', 'ξ', 'κ', 'λ'],
+        keys: ['α', 'σ', 'δ', 'φ', 'γ', 'η', 'ξ', 'κ', 'λ', '΄'],
         isDecorative: false
     },
     {
-        keys: ['ζ', 'χ', 'ψ', 'β', 'ν', 'μ'],
+        keys: ['ζ', 'χ', 'ψ', 'ω', 'β', 'ν', 'μ', ',', '.'],
         isDecorative: false
     },
     {
@@ -35,7 +35,7 @@ export default function GreekKeyboard({ selectedKeys, nextKey, onKeyToggle, show
         const isClickable = !isDecorative;
 
         // Tactile bumps on α (F position) and η (J position)
-        const hasTactileBump = key === 'α' || key === 'η';
+        const hasTactileBump = key === 'φ' || key === 'ξ';
 
         return (
             <button

@@ -14,11 +14,11 @@ const GEORGIAN_KEYBOARD_LAYOUT = [
         isDecorative: false
     },
     {
-        keys: ['ა', 'ს', 'დ', 'ფ', 'გ', 'ჰ', 'ჯ', 'კ', 'ლ'],
+        keys: ['ა', 'ს', 'დ', 'ფ', 'გ', 'ჰ', 'ჯ', 'კ', 'ლ', ';'],
         isDecorative: false
     },
     {
-        keys: ['ზ', 'ხ', 'ც', 'ვ', 'ბ', 'ნ', 'მ', 'შ', 'ჩ', 'ჭ'],
+        keys: ['ზ', 'ხ', 'ც', 'ვ', 'ბ', 'ნ', 'მ', ',', '.'],
         isDecorative: false
     },
     {
