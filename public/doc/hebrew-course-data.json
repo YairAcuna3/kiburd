@@ -1,0 +1,147 @@
+{
+  "phases": [
+    {
+      "id": 1,
+      "title": "1: Fila media (home row)",
+      "levels": [
+        { "id": 1, "title": "Nivel 1", "letters": "שד" },
+        { "id": 2, "title": "Nivel 2", "letters": "גכ" },
+        { "id": 3, "title": "Nivel 3", "letters": "שדגכ" },
+        { "id": 4, "title": "Nivel 4", "letters": "עי" },
+        { "id": 5, "title": "Nivel 5", "letters": "חל" },
+        { "id": 6, "title": "Nivel 6", "letters": "עיחל" },
+        { "id": 7, "title": "Nivel 7", "letters": "שדגכעיחל" },
+        { "id": 8, "title": "Nivel 8", "letters": "ךף" },
+        { "id": 9, "title": "Nivel 9", "letters": "שדגכעיחלךף" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "2: Fila superior",
+      "levels": [
+        { "id": 10, "title": "Nivel 10", "letters": "קר" },
+        { "id": 11, "title": "Nivel 11", "letters": "אט" },
+        { "id": 12, "title": "Nivel 12", "letters": "קראט" },
+        { "id": 13, "title": "Nivel 13", "letters": "ות" },
+        { "id": 14, "title": "Nivel 14", "letters": "םפ" },
+        { "id": 15, "title": "Nivel 15", "letters": "ותםפ" },
+        { "id": 16, "title": "Nivel 16", "letters": "קראטותםפ" },
+        { "id": 17, "title": "Nivel 17", "letters": "נמ" },
+        { "id": 18, "title": "Nivel 18", "letters": "קראטותםפנמ" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "3: Fila inferior",
+      "levels": [
+        { "id": 19, "title": "Nivel 19", "letters": "זס" },
+        { "id": 20, "title": "Nivel 20", "letters": "בה" },
+        { "id": 21, "title": "Nivel 21", "letters": "זסבה" },
+        { "id": 22, "title": "Nivel 22", "letters": "נץ" },
+        { "id": 23, "title": "Nivel 23", "letters": "ץצ" },
+        { "id": 24, "title": "Nivel 24", "letters": "נץצ" },
+        { "id": 25, "title": "Nivel 25", "letters": "זסבהנץצ" },
+        { "id": 26, "title": "Nivel 26", "letters": "ן" },
+        { "id": 27, "title": "Nivel 27", "letters": "זסבהנץצן" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "4: Letras finales (sofit)",
+      "levels": [
+        { "id": 28, "title": "Nivel 28", "letters": "ךף" },
+        { "id": 29, "title": "Nivel 29", "letters": "ןם" },
+        { "id": 30, "title": "Nivel 30", "letters": "ץ" },
+        { "id": 31, "title": "Nivel 31", "letters": "ךףןם" },
+        { "id": 32, "title": "Nivel 32", "letters": "ץןם" },
+        { "id": 33, "title": "Nivel 33", "letters": "ךףןםץ" },
+        { "id": 34, "title": "Nivel 34", "letters": "שדגכעיחלךף" },
+        { "id": 35, "title": "Nivel 35", "letters": "קראטותםפנמ" },
+        { "id": 36, "title": "Nivel 36", "letters": "זסבהנץצןךף" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "5: Todas las letras",
+      "levels": [
+        { "id": 37, "title": "Nivel 37", "letters": "שדגכעיחל" },
+        { "id": 38, "title": "Nivel 38", "letters": "קראטותםפ" },
+        { "id": 39, "title": "Nivel 39", "letters": "זסבהנץצ" },
+        { "id": 40, "title": "Nivel 40", "letters": "שדגכעיחלקראט" },
+        { "id": 41, "title": "Nivel 41", "letters": "ותםפזסבה" },
+        { "id": 42, "title": "Nivel 42", "letters": "נץצןךףןם" },
+        { "id": 43, "title": "Nivel 43", "letters": "שדגכעיחלקראטות" },
+        { "id": 44, "title": "Nivel 44", "letters": "םפזסבהנץצ" },
+        {
+          "id": 45,
+          "title": "Nivel 45",
+          "letters": "שדגכעיחלקראטותםפזסבהנץצןךף"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "6: Palabras básicas",
+      "levels": [
+        {
+          "id": 46,
+          "title": "Nivel 46",
+          "words": ["אני", "אתה", "הוא", "היא"]
+        },
+        {
+          "id": 47,
+          "title": "Nivel 47",
+          "words": ["בית", "מים", "לחם", "אדם"]
+        },
+        {
+          "id": 48,
+          "title": "Nivel 48",
+          "words": ["בית ספר", "מורה", "תלמיד", "ללמוד"]
+        },
+        {
+          "id": 49,
+          "title": "Nivel 49",
+          "words": ["שלום", "תודה", "סליחה", "בסדר"]
+        },
+        {
+          "id": 50,
+          "title": "Nivel 50",
+          "words": ["אחד", "שניים", "שלושה", "ארבעה", "חמישה"]
+        },
+        {
+          "id": 51,
+          "title": "Nivel 51",
+          "words": ["היום", "מחר", "אתמול", "עכשיו"]
+        },
+        {
+          "id": 52,
+          "title": "Nivel 52",
+          "words": ["אני", "אתה", "בית", "מים", "בית ספר", "שלום"]
+        },
+        {
+          "id": 53,
+          "title": "Nivel 53",
+          "words": ["שלום", "תודה", "סליחה", "בסדר", "אחד", "שניים"]
+        },
+        {
+          "id": 54,
+          "title": "Nivel 54",
+          "words": [
+            "אני",
+            "אתה",
+            "הוא",
+            "היא",
+            "בית",
+            "מים",
+            "לחם",
+            "בית ספר",
+            "שלום",
+            "תודה",
+            "אחד",
+            "שניים"
+          ]
+        }
+      ]
+    }
+  ]
+}

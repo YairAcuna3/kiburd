@@ -4,12 +4,16 @@ import { useState, useEffect, useRef, useCallback } from 'react';
 import UrduKeyboard from './UrduKeyboard';
 import ArmenianKeyboard from './ArmenianKeyboard';
 import RussianKeyboard from './RussianKeyboard';
+import KoreanKeyboard from './KoreanKeyboard';
+import GeorgianKeyboard from './GeorgianKeyboard';
+import HebrewKeyboard from './HebrewKeyboard';
+import GreekKeyboard from './GreekKeyboard';
 
 interface CourseTypingTestProps {
     text?: string;
     words?: string[];
     onTestComplete: (results: TestResults) => void;
-    keyboard?: 'urdu' | 'armenian' | 'russian';
+    keyboard?: 'urdu' | 'armenian' | 'russian' | 'korean' | 'georgian' | 'hebrew' | 'greek';
 }
 
 export interface TestResults {
@@ -318,6 +322,34 @@ export default function CourseTypingTest({ text, words, onTestComplete, keyboard
                         />
                     ) : keyboard === 'russian' ? (
                         <RussianKeyboard
+                            selectedKeys={new Set([pressedKey])}
+                            nextKey={nextKey}
+                            onKeyToggle={() => { }}
+                            showNextKey={true}
+                        />
+                    ) : keyboard === 'korean' ? (
+                        <KoreanKeyboard
+                            selectedKeys={new Set([pressedKey])}
+                            nextKey={nextKey}
+                            onKeyToggle={() => { }}
+                            showNextKey={true}
+                        />
+                    ) : keyboard === 'georgian' ? (
+                        <GeorgianKeyboard
+                            selectedKeys={new Set([pressedKey])}
+                            nextKey={nextKey}
+                            onKeyToggle={() => { }}
+                            showNextKey={true}
+                        />
+                    ) : keyboard === 'hebrew' ? (
+                        <HebrewKeyboard
+                            selectedKeys={new Set([pressedKey])}
+                            nextKey={nextKey}
+                            onKeyToggle={() => { }}
+                            showNextKey={true}
+                        />
+                    ) : keyboard === 'greek' ? (
+                        <GreekKeyboard
                             selectedKeys={new Set([pressedKey])}
                             nextKey={nextKey}
                             onKeyToggle={() => { }}

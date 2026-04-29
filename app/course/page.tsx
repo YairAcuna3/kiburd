@@ -21,7 +21,7 @@ interface CourseData {
     phases: Phase[];
 }
 
-type CourseId = 'urdu' | 'armenian' | 'russian';
+type CourseId = 'urdu' | 'armenian' | 'russian' | 'korean' | 'georgian' | 'hebrew' | 'greek';
 
 const COURSES: { id: CourseId; label: string; file: string; title: string; gradient: string; cardBg: string; cardBorder: string; badgeBg: string; backHover: string; flag: string }[] = [
     {
@@ -59,6 +59,54 @@ const COURSES: { id: CourseId; label: string; file: string; title: string; gradi
         badgeBg: 'bg-blue-800',
         backHover: 'hover:bg-blue-800',
         flag: '/img/flags/Russia.svg',
+    },
+    {
+        id: 'korean',
+        label: '한국어 (Corea)',
+        file: 'doc/korean-course-data.json',
+        title: 'Curso de Mecanografía Coreano',
+        gradient: 'from-[#1a0a3a] to-[#4a2a8e]',
+        cardBg: 'bg-purple-900 hover:bg-purple-800',
+        cardBorder: 'hover:border-purple-700',
+        badgeBg: 'bg-purple-800',
+        backHover: 'hover:bg-purple-800',
+        flag: '/img/flags/Korea.svg',
+    },
+    {
+        id: 'georgian',
+        label: 'ქართული (Georgia)',
+        file: 'doc/georgian-course-data.json',
+        title: 'Curso de Mecanografía Georgiano',
+        gradient: 'from-[#3a0a0a] to-[#8e2a2a]',
+        cardBg: 'bg-rose-900 hover:bg-rose-800',
+        cardBorder: 'hover:border-rose-700',
+        badgeBg: 'bg-rose-800',
+        backHover: 'hover:bg-rose-800',
+        flag: '/img/flags/Georgia.svg',
+    },
+    {
+        id: 'hebrew',
+        label: 'עברית (Israel)',
+        file: 'doc/hebrew-course-data.json',
+        title: 'Curso de Mecanografía Hebreo',
+        gradient: 'from-[#1a2a4a] to-[#2a4a8e]',
+        cardBg: 'bg-sky-900 hover:bg-sky-800',
+        cardBorder: 'hover:border-sky-700',
+        badgeBg: 'bg-sky-800',
+        backHover: 'hover:bg-sky-800',
+        flag: '/img/flags/Israel.svg',
+    },
+    {
+        id: 'greek',
+        label: 'Ελληνικά (Grecia)',
+        file: 'doc/greek-course-data.json',
+        title: 'Curso de Mecanografía Griego',
+        gradient: 'from-[#0a2a1a] to-[#1a6e3a]',
+        cardBg: 'bg-emerald-900 hover:bg-emerald-800',
+        cardBorder: 'hover:border-emerald-700',
+        badgeBg: 'bg-emerald-800',
+        backHover: 'hover:bg-emerald-800',
+        flag: '/img/flags/Greece.svg',
     },
 ];
 
@@ -313,7 +361,15 @@ export default function CoursePage() {
                                 text={currentLevelData.letters}
                                 words={currentLevelData.words}
                                 onTestComplete={handleTestComplete}
-                                keyboard={selectedCourse === 'armenian' ? 'armenian' : selectedCourse === 'russian' ? 'russian' : 'urdu'}
+                                keyboard={
+                                    selectedCourse === 'armenian' ? 'armenian' :
+                                        selectedCourse === 'russian' ? 'russian' :
+                                            selectedCourse === 'korean' ? 'korean' :
+                                                selectedCourse === 'georgian' ? 'georgian' :
+                                                    selectedCourse === 'hebrew' ? 'hebrew' :
+                                                        selectedCourse === 'greek' ? 'greek' :
+                                                            'urdu'
+                                }
                             />
                         ) : (
                             <div className="space-y-6">

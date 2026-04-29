@@ -1,0 +1,146 @@
+{
+  "phases": [
+    {
+      "id": 1,
+      "title": "1: Fila media (home row)",
+      "levels": [
+        { "id": 1, "title": "Nivel 1", "letters": "ασ" },
+        { "id": 2, "title": "Nivel 2", "letters": "δφ" },
+        { "id": 3, "title": "Nivel 3", "letters": "ασδφ" },
+        { "id": 4, "title": "Nivel 4", "letters": "γη" },
+        { "id": 5, "title": "Nivel 5", "letters": "ξκ" },
+        { "id": 6, "title": "Nivel 6", "letters": "γηξκ" },
+        { "id": 7, "title": "Nivel 7", "letters": "ασδφγηξκ" },
+        { "id": 8, "title": "Nivel 8", "letters": "λ;" },
+        { "id": 9, "title": "Nivel 9", "letters": "ασδφγηξκλ" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "2: Fila superior",
+      "levels": [
+        { "id": 10, "title": "Nivel 10", "letters": "ςε" },
+        { "id": 11, "title": "Nivel 11", "letters": "ρτ" },
+        { "id": 12, "title": "Nivel 12", "letters": "ςερτ" },
+        { "id": 13, "title": "Nivel 13", "letters": "υθ" },
+        { "id": 14, "title": "Nivel 14", "letters": "ιο" },
+        { "id": 15, "title": "Nivel 15", "letters": "υθιο" },
+        { "id": 16, "title": "Nivel 16", "letters": "ςερτυθιο" },
+        { "id": 17, "title": "Nivel 17", "letters": "πω" },
+        { "id": 18, "title": "Nivel 18", "letters": "ςερτυθιοπω" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "3: Fila inferior",
+      "levels": [
+        { "id": 19, "title": "Nivel 19", "letters": "ζχ" },
+        { "id": 20, "title": "Nivel 20", "letters": "ψβ" },
+        { "id": 21, "title": "Nivel 21", "letters": "ζχψβ" },
+        { "id": 22, "title": "Nivel 22", "letters": "νμ" },
+        { "id": 23, "title": "Nivel 23", "letters": "κλ" },
+        { "id": 24, "title": "Nivel 24", "letters": "νμκλ" },
+        { "id": 25, "title": "Nivel 25", "letters": "ζχψβνμ" },
+        { "id": 26, "title": "Nivel 26", "letters": "π" },
+        { "id": 27, "title": "Nivel 27", "letters": "ζχψβνμπ" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "4: Todas las filas",
+      "levels": [
+        { "id": 28, "title": "Nivel 28", "letters": "ασδφςε" },
+        { "id": 29, "title": "Nivel 29", "letters": "γηξκρτ" },
+        { "id": 30, "title": "Nivel 30", "letters": "λυθζχ" },
+        { "id": 31, "title": "Nivel 31", "letters": "ιοπωψβ" },
+        { "id": 32, "title": "Nivel 32", "letters": "ασδφγηξκλ" },
+        { "id": 33, "title": "Nivel 33", "letters": "ςερτυθιοπω" },
+        { "id": 34, "title": "Nivel 34", "letters": "ζχψβνμ" },
+        { "id": 35, "title": "Nivel 35", "letters": "ασδφγηξκλςερτ" },
+        {
+          "id": 36,
+          "title": "Nivel 36",
+          "letters": "ασδφγηξκλςερτυθιοπωζχψβνμ"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "5: Letras con acento",
+      "levels": [
+        { "id": 37, "title": "Nivel 37", "letters": "άέ" },
+        { "id": 38, "title": "Nivel 38", "letters": "ήί" },
+        { "id": 39, "title": "Nivel 39", "letters": "όύ" },
+        { "id": 40, "title": "Nivel 40", "letters": "άέήί" },
+        { "id": 41, "title": "Nivel 41", "letters": "όύώ" },
+        { "id": 42, "title": "Nivel 42", "letters": "άέήίόύώ" },
+        { "id": 43, "title": "Nivel 43", "letters": "ασδφάέ" },
+        { "id": 44, "title": "Nivel 44", "letters": "ςερτήίόύ" },
+        { "id": 45, "title": "Nivel 45", "letters": "ασδφγηξκλάέήίόύώ" }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "6: Palabras básicas",
+      "levels": [
+        {
+          "id": 46,
+          "title": "Nivel 46",
+          "words": ["και", "ή", "αλλά", "αυτό"]
+        },
+        {
+          "id": 47,
+          "title": "Nivel 47",
+          "words": ["σπίτι", "νερό", "ψωμί", "άνθρωπος"]
+        },
+        {
+          "id": 48,
+          "title": "Nivel 48",
+          "words": ["σχολείο", "δάσκαλος", "μαθητής", "μάθηση"]
+        },
+        {
+          "id": 49,
+          "title": "Nivel 49",
+          "words": ["γεια", "ευχαριστώ", "συγγνώμη", "εντάξει"]
+        },
+        {
+          "id": 50,
+          "title": "Nivel 50",
+          "words": ["ένα", "δύο", "τρία", "τέσσερα", "πέντε"]
+        },
+        {
+          "id": 51,
+          "title": "Nivel 51",
+          "words": ["σήμερα", "αύριο", "χθες", "τώρα"]
+        },
+        {
+          "id": 52,
+          "title": "Nivel 52",
+          "words": ["και", "ή", "σπίτι", "νερό", "σχολείο", "γεια"]
+        },
+        {
+          "id": 53,
+          "title": "Nivel 53",
+          "words": ["γεια", "ευχαριστώ", "συγγνώμη", "εντάξει", "ένα", "δύο"]
+        },
+        {
+          "id": 54,
+          "title": "Nivel 54",
+          "words": [
+            "και",
+            "ή",
+            "σπίτι",
+            "νερό",
+            "σχολείο",
+            "δάσκαλος",
+            "γεια",
+            "ευχαριστώ",
+            "ένα",
+            "δύο",
+            "τρία"
+          ]
+        }
+      ]
+    }
+  ]
+}

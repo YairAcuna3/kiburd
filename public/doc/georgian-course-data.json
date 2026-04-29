@@ -1,0 +1,142 @@
+{
+  "phases": [
+    {
+      "id": 1,
+      "title": "1: Fila media (home row)",
+      "levels": [
+        { "id": 1, "title": "Nivel 1", "letters": "ასდ" },
+        { "id": 2, "title": "Nivel 2", "letters": "ფგ" },
+        { "id": 3, "title": "Nivel 3", "letters": "ასდფგ" },
+        { "id": 4, "title": "Nivel 4", "letters": "ჰჯ" },
+        { "id": 5, "title": "Nivel 5", "letters": "კლ" },
+        { "id": 6, "title": "Nivel 6", "letters": "ჰჯკლ" },
+        { "id": 7, "title": "Nivel 7", "letters": "ასდფგჰჯკლ" },
+        { "id": 8, "title": "Nivel 8", "letters": "ეი" },
+        { "id": 9, "title": "Nivel 9", "letters": "ასდფგჰჯკლეი" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "2: Fila superior",
+      "levels": [
+        { "id": 10, "title": "Nivel 10", "letters": "ქწ" },
+        { "id": 11, "title": "Nivel 11", "letters": "ერ" },
+        { "id": 12, "title": "Nivel 12", "letters": "ქწერ" },
+        { "id": 13, "title": "Nivel 13", "letters": "ტყ" },
+        { "id": 14, "title": "Nivel 14", "letters": "უი" },
+        { "id": 15, "title": "Nivel 15", "letters": "ტყუი" },
+        { "id": 16, "title": "Nivel 16", "letters": "ქწერტყუი" },
+        { "id": 17, "title": "Nivel 17", "letters": "ოპ" },
+        { "id": 18, "title": "Nivel 18", "letters": "ქწერტყუიოპ" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "3: Fila inferior",
+      "levels": [
+        { "id": 19, "title": "Nivel 19", "letters": "ზხ" },
+        { "id": 20, "title": "Nivel 20", "letters": "ცვ" },
+        { "id": 21, "title": "Nivel 21", "letters": "ზხცვ" },
+        { "id": 22, "title": "Nivel 22", "letters": "ბნ" },
+        { "id": 23, "title": "Nivel 23", "letters": "მ" },
+        { "id": 24, "title": "Nivel 24", "letters": "ბნმ" },
+        { "id": 25, "title": "Nivel 25", "letters": "ზხცვბნმ" },
+        { "id": 26, "title": "Nivel 26", "letters": "შ" },
+        { "id": 27, "title": "Nivel 27", "letters": "ზხცვბნმშ" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "4: Letras especiales",
+      "levels": [
+        { "id": 28, "title": "Nivel 28", "letters": "ჭჩ" },
+        { "id": 29, "title": "Nivel 29", "letters": "ჯჰ" },
+        { "id": 30, "title": "Nivel 30", "letters": "ჭჩჯჰ" },
+        { "id": 31, "title": "Nivel 31", "letters": "ყ" },
+        { "id": 32, "title": "Nivel 32", "letters": "ღ" },
+        { "id": 33, "title": "Nivel 33", "letters": "ყღ" },
+        { "id": 34, "title": "Nivel 34", "letters": "ჭჩჯჰყღ" },
+        { "id": 35, "title": "Nivel 35", "letters": "ძ" },
+        { "id": 36, "title": "Nivel 36", "letters": "ჭჩჯჰყღძ" }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "5: Todas las letras",
+      "levels": [
+        { "id": 37, "title": "Nivel 37", "letters": "ასდფგჰჯკლქწ" },
+        { "id": 38, "title": "Nivel 38", "letters": "ერტყუიოპზხ" },
+        { "id": 39, "title": "Nivel 39", "letters": "ცვბნმშჭჩ" },
+        { "id": 40, "title": "Nivel 40", "letters": "ასდფგჰჯკლქწერ" },
+        { "id": 41, "title": "Nivel 41", "letters": "ტყუიოპზხცვ" },
+        { "id": 42, "title": "Nivel 42", "letters": "ბნმშჭჩჯჰყღძ" },
+        { "id": 43, "title": "Nivel 43", "letters": "ასდფგჰჯკლქწერტყ" },
+        { "id": 44, "title": "Nivel 44", "letters": "უიოპზხცვბნმ" },
+        {
+          "id": 45,
+          "title": "Nivel 45",
+          "letters": "ასდფგჰჯკლქწერტყუიოპზხცვბნმშჭჩყღძ"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "6: Palabras básicas",
+      "levels": [
+        { "id": 46, "title": "Nivel 46", "words": ["და", "ან", "არ", "ეს"] },
+        {
+          "id": 47,
+          "title": "Nivel 47",
+          "words": ["სახლი", "წყალი", "პური", "ადამიანი"]
+        },
+        {
+          "id": 48,
+          "title": "Nivel 48",
+          "words": ["სკოლა", "მასწავლებელი", "მოსწავლე", "სწავლა"]
+        },
+        {
+          "id": 49,
+          "title": "Nivel 49",
+          "words": ["გამარჯობა", "მადლობა", "ბოდიში", "კარგი"]
+        },
+        {
+          "id": 50,
+          "title": "Nivel 50",
+          "words": ["ერთი", "ორი", "სამი", "ოთხი", "ხუთი"]
+        },
+        {
+          "id": 51,
+          "title": "Nivel 51",
+          "words": ["დღეს", "ხვალ", "გუშინ", "ახლა"]
+        },
+        {
+          "id": 52,
+          "title": "Nivel 52",
+          "words": ["და", "ან", "სახლი", "წყალი", "სკოლა", "გამარჯობა"]
+        },
+        {
+          "id": 53,
+          "title": "Nivel 53",
+          "words": ["გამარჯობა", "მადლობა", "ბოდიში", "კარგი", "ერთი", "ორი"]
+        },
+        {
+          "id": 54,
+          "title": "Nivel 54",
+          "words": [
+            "და",
+            "ან",
+            "სახლი",
+            "წყალი",
+            "სკოლა",
+            "მასწავლებელი",
+            "გამარჯობა",
+            "მადლობა",
+            "ერთი",
+            "ორი",
+            "სამი"
+          ]
+        }
+      ]
+    }
+  ]
+}

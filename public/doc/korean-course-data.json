@@ -1,0 +1,155 @@
+{
+  "phases": [
+    {
+      "id": 1,
+      "title": "1: Fila media (home row)",
+      "levels": [
+        { "id": 1, "title": "Nivel 1", "letters": "ㅏㅓ" },
+        { "id": 2, "title": "Nivel 2", "letters": "ㄴㄹ" },
+        { "id": 3, "title": "Nivel 3", "letters": "ㄴㅏㅓㄹ" },
+        { "id": 4, "title": "Nivel 4", "letters": "ㅣㅡ" },
+        { "id": 5, "title": "Nivel 5", "letters": "ㅎㅇ" },
+        { "id": 6, "title": "Nivel 6", "letters": "ㅎㅣㅡㅇ" },
+        { "id": 7, "title": "Nivel 7", "letters": "ㄴㅏㅓㄹㅣㅡㅎㅇ" },
+        { "id": 8, "title": "Nivel 8", "letters": "ㅡㅢ" },
+        { "id": 9, "title": "Nivel 9", "letters": "ㄴㅏㅓㄹㅣㅡㅎㅇㅢ" }
+      ]
+    },
+    {
+      "id": 2,
+      "title": "2: Fila superior",
+      "levels": [
+        { "id": 10, "title": "Nivel 10", "letters": "ㅂㅈ" },
+        { "id": 11, "title": "Nivel 11", "letters": "ㄷㄱ" },
+        { "id": 12, "title": "Nivel 12", "letters": "ㅂㅈㄷㄱ" },
+        { "id": 13, "title": "Nivel 13", "letters": "ㅅㅛ" },
+        { "id": 14, "title": "Nivel 14", "letters": "ㅕㅑ" },
+        { "id": 15, "title": "Nivel 15", "letters": "ㅕㅑㅛㅅ" },
+        { "id": 16, "title": "Nivel 16", "letters": "ㅂㅈㄷㄱㅅㅛㅕㅑ" },
+        { "id": 17, "title": "Nivel 17", "letters": "ㅁㄴ" },
+        { "id": 18, "title": "Nivel 18", "letters": "ㅂㅈㄷㄱㅅㅛㅕㅑㅁㄴ" }
+      ]
+    },
+    {
+      "id": 3,
+      "title": "3: Fila inferior",
+      "levels": [
+        { "id": 19, "title": "Nivel 19", "letters": "ㅋㅌ" },
+        { "id": 20, "title": "Nivel 20", "letters": "ㅊㅍ" },
+        { "id": 21, "title": "Nivel 21", "letters": "ㅋㅌㅊㅍ" },
+        { "id": 22, "title": "Nivel 22", "letters": "ㅠㅜ" },
+        { "id": 23, "title": "Nivel 23", "letters": "ㅔㅐ" },
+        { "id": 24, "title": "Nivel 24", "letters": "ㅔㅐㅠㅜ" },
+        { "id": 25, "title": "Nivel 25", "letters": "ㅋㅌㅊㅍㅠㅜㅔㅐ" },
+        { "id": 26, "title": "Nivel 26", "letters": "ㄹㅎ" },
+        { "id": 27, "title": "Nivel 27", "letters": "ㅋㅌㅊㅍㅠㅜㅔㅐㄹㅎ" }
+      ]
+    },
+    {
+      "id": 4,
+      "title": "4: Todas las filas",
+      "levels": [
+        { "id": 28, "title": "Nivel 28", "letters": "ㄴㅏㅂㅈ" },
+        { "id": 29, "title": "Nivel 29", "letters": "ㄹㅓㄷㄱ" },
+        { "id": 30, "title": "Nivel 30", "letters": "ㅎㅣㅋㅌ" },
+        { "id": 31, "title": "Nivel 31", "letters": "ㅇㅡㅊㅍ" },
+        { "id": 32, "title": "Nivel 32", "letters": "ㅂㅈㄷㄱㄴㅏㅓㄹ" },
+        { "id": 33, "title": "Nivel 33", "letters": "ㅋㅌㅊㅍㅎㅣㅡㅇ" },
+        {
+          "id": 34,
+          "title": "Nivel 34",
+          "letters": "ㄴㅏㅓㄹㅣㅡㅎㅇㅂㅈㄷㄱ"
+        },
+        {
+          "id": 35,
+          "title": "Nivel 35",
+          "letters": "ㅋㅌㅊㅍㅠㅜㅔㅐㅕㅑㅛㅅ"
+        },
+        {
+          "id": 36,
+          "title": "Nivel 36",
+          "letters": "ㄴㅏㅓㄹㅣㅡㅎㅇㅂㅈㄷㄱㅋㅌㅊㅍ"
+        }
+      ]
+    },
+    {
+      "id": 5,
+      "title": "5: Vocales compuestas",
+      "levels": [
+        { "id": 37, "title": "Nivel 37", "letters": "ㅘㅙ" },
+        { "id": 38, "title": "Nivel 38", "letters": "ㅚㅝ" },
+        { "id": 39, "title": "Nivel 39", "letters": "ㅞㅟ" },
+        { "id": 40, "title": "Nivel 40", "letters": "ㅘㅙㅚㅝ" },
+        { "id": 41, "title": "Nivel 41", "letters": "ㅞㅟㅢ" },
+        { "id": 42, "title": "Nivel 42", "letters": "ㅘㅙㅚㅝㅞㅟㅢ" },
+        { "id": 43, "title": "Nivel 43", "letters": "ㄴㅏㅓㄹㅘㅙ" },
+        { "id": 44, "title": "Nivel 44", "letters": "ㅎㅇㅚㅝㅞ" },
+        {
+          "id": 45,
+          "title": "Nivel 45",
+          "letters": "ㄴㅏㅓㄹㅣㅡㅎㅇㅘㅙㅚㅝㅞㅟㅢ"
+        }
+      ]
+    },
+    {
+      "id": 6,
+      "title": "6: Palabras básicas",
+      "levels": [
+        {
+          "id": 46,
+          "title": "Nivel 46",
+          "words": ["나", "너", "우리", "이것"]
+        },
+        { "id": 47, "title": "Nivel 47", "words": ["사람", "집", "물", "밥"] },
+        {
+          "id": 48,
+          "title": "Nivel 48",
+          "words": ["학교", "선생님", "학생", "공부"]
+        },
+        {
+          "id": 49,
+          "title": "Nivel 49",
+          "words": ["안녕", "감사", "미안", "괜찮아"]
+        },
+        {
+          "id": 50,
+          "title": "Nivel 50",
+          "words": ["하나", "둘", "셋", "넷", "다섯"]
+        },
+        {
+          "id": 51,
+          "title": "Nivel 51",
+          "words": ["오늘", "내일", "어제", "지금"]
+        },
+        {
+          "id": 52,
+          "title": "Nivel 52",
+          "words": ["나", "너", "우리", "사람", "집", "물", "밥", "학교"]
+        },
+        {
+          "id": 53,
+          "title": "Nivel 53",
+          "words": ["안녕하세요", "감사합니다", "미안합니다", "괜찮아요"]
+        },
+        {
+          "id": 54,
+          "title": "Nivel 54",
+          "words": [
+            "나",
+            "너",
+            "우리",
+            "이것",
+            "사람",
+            "집",
+            "물",
+            "밥",
+            "학교",
+            "선생님",
+            "학생",
+            "공부"
+          ]
+        }
+      ]
+    }
+  ]
+}
